@@ -5,10 +5,11 @@
     }
 
     body ul {
+        display: flow-root;
         list-style-type: none;
         margin: 0;
         padding: 0;
-        overflow: hidden;
+        -webkit-user-select: none;
         background-color: #444;
         position: -webkit-sticky;
         position: sticky;
@@ -16,12 +17,15 @@
     }
 
     body li {
-        float: left;
         font-size: 4vw;
     }
 
-    li a {
+    li {
         display: block;
+    }
+
+    li a {
+        display: none;
         text-align: center;
         padding: 10px 16px;
         color: aliceblue;
@@ -30,6 +34,38 @@
 
     li a:hover {
         background-color: #222;
+    }
+
+    .menu {
+        display: block;
+        float: left;
+    }
+
+    .menuelements {
+        position: absolute;
+        margin-top: calc(4vw + 20px);
+        clear: both;
+        float: left;
+    }
+
+    .menutop:hover ul li a{
+        display: block;
+    }
+
+    .sitename {
+        padding: 10px 16px;
+        margin: 0;
+        float: right;
+        color: cyan;
+        font-family: monospace;
+    }
+
+    ul img {
+        padding-top: 4px;
+        padding-right: 4px;
+        margin: 0;
+        float: right;
+        width: calc(3.5vw + 16px);
     }
 
     .active {
@@ -53,7 +89,14 @@
     }
 
     footer li{
-        font-size: 4vw;
+        font-size: 3.75vw;
+    }
+
+    footer ul li a{
+        display: initial;
+        text-align: initial;
+        padding: initial;
+        text-decoration: none;
     }
 
     .left {
@@ -99,6 +142,11 @@
         margin-left: 1.5vw;
     }
 
+    .warning {
+        font-size: 4.5vw !important;
+        text-align: center;
+    }
+
 }
 
 @media screen and (min-width:721px){
@@ -116,6 +164,7 @@
         position: -webkit-sticky;
         position: sticky;
         top: 0;
+        text-align: center;
     }
 
     body li {
@@ -133,6 +182,24 @@
 
     li a:hover {
         background-color: #222;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .sitename {
+        padding: 10px 16px;
+        float: right;
+        color: cyan;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    ul img {
+        padding-top: 4px;
+        padding-right: 4px;
+        float: right;
+        width: calc(1.5vw + 16px);
     }
 
     .active {
@@ -177,5 +244,11 @@
 
     img {
         max-width: 80vw;
+    }
+
+    .warning {
+        font-size: 1.5vw !important;
+        text-align: center;
+        padding: 5px;
     }
 }

@@ -23,19 +23,19 @@
     }
 
     .name {
-        width: 25vw;
+        width: 25%;
         font-size: 4vw;
         color: red;
     }
 
     .desc {
-        width: 55vw;
+        width: 55%;
         font-size: 4vw;
         color: green;
     }
 
     .ver {
-        width: 10vw;
+        width: 10%;
         font-size: 4vw;
         color: blue;
     }
@@ -48,10 +48,7 @@
 
     .element td {
         padding-top: 1vw;
-        padding-bottom: 1vw;padding-top: 1vw;
         padding-bottom: 1vw;
-        width: 100vw;
-        font-size: 4.5vw;
     }
 }
 
