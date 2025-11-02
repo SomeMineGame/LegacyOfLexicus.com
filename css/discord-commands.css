@@ -1,11 +1,12 @@
 @media screen and (max-width: 720px) {
     .maincontainer {
         grid-area: 1/1/1/6;
+        text-align: center;
     }
 
     .title {
         color: aliceblue;
-        font-size: 7vw;
+        font-size: 6vw;
         text-align: center;
     }
 
@@ -46,6 +47,10 @@
         font-size: 7vw;
         text-align: center;
         color: lemonchiffon;
+    }
+
+    .hidden {
+        display: none !important;
     }
 }
 

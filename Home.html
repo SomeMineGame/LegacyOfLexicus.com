@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="icon" type="image/x-icon" href="/css/Logo.png">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/home.css">
 </head>
 <body>
     <ul id="homeul">
-        <li><a class="active" href="/Home">Home</a></li>
-        <li><a href="/Commands">Discord-Commands</a></li>
-        <li><a href="/Mods">Mods</a></li>
-        <li><a href="/Datapacks">Datapacks</a></li>
-        <li><a href="/Lawbook">Lawbook</a></li>
-        <li><a href="/News">News</a></li>
-        <li style="padding: 10px 16px; float: right; color: orange">Legacy Of Lexicus Wiki</li>
+        <img class="logo" src="/assets/Logo.png">
+        <li class="sitename">Legacy Of Lexicus Wiki</li>
+        <li class="menutop"><a class="menu">Menu</a>
+            <ul class="menuelements">
+                <li><a class="active" href="/Home">Home</a></li>
+                <li><a href="/Commands">Discord-Commands</a></li>
+                <li><a href="/Mods">Mods</a></li>
+                <li><a href="/Datapacks">Datapacks</a></li>
+                <li><a href="/Lawbook">Lawbook</a></li>
+                <li><a href="/News">News</a></li>
+            </ul>
+        </li>
     </ul>
-    <h1 style="background-color: yellow;font-size: 24px; color: black">LegacyOfLexicus.com IS STILL UNDER CONSTRUCTION. EXPECT BUGS.</h1>
+    <h1 class="warning" style="background-color: yellow; color: black">LegacyOfLexicus.com IS STILL UNDER CONSTRUCTION. EXPECT BUGS.</h1>
     <div class="maingrid">
         <img src="/css/Logo.png">
         <div class="maincontainer">
@@ -31,22 +35,21 @@
             <h3 class="mobile"><pre>Minecraft Version - 1.21.8<br><br>Minecraft Compatibility -<br>Latest Java and Bedrock Crossplay<br><br>Mod Launcher - Fabric<br><br>Ram - 12GB<br><br>Processor/CPU - Intel i7 6700<br><br>Storage - 1TB SSD<br><br>Backups - Hourly<br><br>Network Speed - 500MB/S</pre></h3>
         </div>
         <div class="donation">
-            <h3 style="background-color:#333; padding: 10px 10px">While I host the server myself, I have to pay for the domains, network, and hardware. Currently I'm spending my own money and working alone on this project, so if you want to help fund the server - you can check out <a href="../Extras/Subs">the Sub program</a>!</h3>
+            <h3 style="background-color:#333; padding: 10px 10px">While I host the server myself, I have to pay for the domains, network, and hardware. Currently I'm spending my own money and working alone on this project, so if you want to help fund the server - you can check out <a href="/Extras/Subs">the Sub program</a>!</h3>
         </div>
         <div class="backgrounddiv2">
             <h1>Useful Links</h1>
-            <button onclick='window.open("https://map.someminegame.com/")'>Live Map</button>
-            <button onclick='window.open("http://stats.someminegame.com:3000/public-dashboards/5cacaa3585fb4364b3d5134fd3c9fcd4")'>Server Stats</button>
+            <button onclick='window.open("https://map.legacyoflexicus.com/")'>Live Map</button>
         </div>
         <div class="info">
             <h1>We have a <a onclick='window.open("https://discord.gg/invite/jQjj5NRzN7")'><u>community Discord server</u></a>! Feel free to join it for additional information about the server, or to just hang out!</h1>
         </div>
     </div>
-</body>
 <footer>
     <ul style="padding: 3px 10px">
         <li class="left">Site Created By: <a href="https://someminegame.com">SomeMineGame</a></li>
         <li class="right">Page Last Edited: August 7, 2025 at 8:47 PM</li>
     </ul>
 </footer>
+</body>
 </html>
