@@ -1,0 +1,140 @@
+@media screen and (max-width:720px) {
+    img {
+        grid-area: 1/1/1/3;
+        max-width: 30vw;
+        margin-bottom: 1vw;
+    }
+
+    h1:not(.warning) {
+        color: aliceblue;
+        text-align: center;
+        font-size: 7vw;
+    }
+
+    .indent {
+        margin-left: 30vw;
+        margin-bottom: 12vw;
+    }
+
+    h2 {
+        color: aliceblue;
+        text-align: center;
+        font-size: 5vw;
+    }
+
+    .maingrid h3 {
+        font-size: 4vw;
+    }
+
+    .maincontainer {
+        grid-area: 1/1/1/6;
+    }
+
+    .maincontainer h1:not(.warning) {
+        font-size: 6vw;
+    }
+
+    .backgrounddiv1 {
+        background-color: #444;
+        text-align: center;
+        padding: 0px 10px;
+        grid-area: 2/1/2/6;
+    }
+
+    .backgrounddiv1 h1 {
+        color: cornflowerblue;
+        text-align: center;
+    }
+
+    .backgrounddiv1 h3 {
+        color: azure;
+        text-align: center;
+    }
+
+    .donation {
+        grid-area: 3/1/3/6;
+    }
+
+    .donation h3 {
+        color: aliceblue;
+        text-align: center;
+    }
+
+    .backgrounddiv2 {
+        background-color: #444;
+        text-align: center;
+        padding: 10px 0px;
+        grid-area: 4/1/4/6;
+    }
+
+    .backgrounddiv2 h1 {
+        color: cornflowerblue;
+        text-align: center;
+    }
+
+    .backgrounddiv2 button {
+        color: grey;
+        text-align: center;
+    }
+
+    .info, .info h1 {
+        grid-area: 5/1/5/6;
+        font-size: 4vw;
+    }
+
+    .comp {
+        display: none
+    }
+
+    a {
+        color:aliceblue
+    }
+}
+@media screen and (min-width:721px) {
+    h1 {
+        color: aliceblue;
+        text-align: center;
+        font-size: 1.9vw;
+    }
+
+    h2 {
+        scroll-margin-top: calc(20px + 4vw);
+        color: aliceblue;
+        text-align: center;
+        font-size: 1.5vw;
+    }
+
+    p {
+        color: aliceblue;
+        font-size: 1.25vw;
+    }
+
+    .maincontainer {
+        grid-area: 1/2/1/10;
+        text-align: center;
+        margin-bottom: 1vw;
+    }
+
+    a {
+        color:aliceblue
+    }
+
+    em {
+        background-color: #222;
+        padding: 0 0.25vw 0.25vw 0.25vw;
+        font-family: monospace;
+        font-size: 1vw;
+        color: ghostwhite;
+    }
+
+    .section {
+        background-color: #444;
+        padding: 0.1vw 2vw;
+    }
+
+    hr {
+        margin: 1vw 0;
+        height: 0.1vw;
+        background-color: aliceblue;
+    }
+}

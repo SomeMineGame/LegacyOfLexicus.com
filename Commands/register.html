@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#56e2ff">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="register">
+    <meta property="og:url" content="https://development.legacyoflexicus.com/Commands/register.html">
+    <meta property="og:description" content="Whitelists a player's Minecraft account on the Minecraft server, sets their Discord server nickname to their Minecraft username, and adds them to the database. Bedrock usernames are prefixed with a &quot;.&quot;. Also works for updating a username. The old username will be removed from the whitelist.">
+    <meta property="og:image" content="https://legacyoflexicus.com/assets/Logo.png">
+    <title>register</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/Commands/commands.css">
+</head>
+<body>
+    <ul id="homeul">
+        <li class="right"><img class="logo" src="/assets/Logo.png" alt="Legacy Of Lexicus Logo"></li>
+        <li class="sitename">Legacy Of Lexicus Wiki</li>
+        <li class="menutop"><a class="menu">Menu</a>
+            <ul class="menuelements">
+                <li><a href="/Home.html">Home</a></li>
+                <li><a class="active" href="/Commands.html">Discord-Commands</a></li>
+                <li><a href="/Plugins.html">Plugins</a></li>
+                <li><a href="/Datapacks.html">Datapacks</a></li>
+                <li><a href="/Lawbook.html">Lawbook</a></li>
+                <li><a href="/News.html">News</a></li>
+            </ul>
+        </li>
+    </ul>
+    <h1 class="warning" style="background-color: yellow; color: black">LegacyOfLexicus.com IS STILL UNDER CONSTRUCTION. EXPECT BUGS.</h1>
+    <div class="maingrid">
+        <div class="info">
+            <h1>Command<a class="back" href="../Commands.html">Back</a></h1>
+            <h2>/register</h2>
+            <hr>
+            <h1>Description</h1>
+            <h2>Whitelists a player's Minecraft account on the Minecraft server, sets their Discord server nickname to their Minecraft username, and adds them to the database. Bedrock usernames are prefixed with a ".". Also works for updating a username. The old username will be removed from the whitelist.</h2>
+            <hr>
+            <h1>Permission</h1>
+            <h2>Everyone</h2>
+            <hr>
+            <h1>Syntax</h1>
+            <h2>/register &lt;username&gt; &lt;platform&gt;</h2>
+            <hr>
+            <h1>Arguments</h1>
+            <div class="args">
+                <h2><em>username</em> is your Minecraft username. Required.</h2>
+                <h2><em>platform</em> is the edition of Minecraft you play. The set choices are Bedrock and Java. Required.</h2>
+            </div>
+        </div>
+        <div class="links">
+            <h1>Examples</h1>
+            <a href="#1">Registering A Bedrock Account</a>
+            <a href="#2">Registering A Java Account</a>
+            <a href="#3">Updating Username</a>
+            <div class="gap"><hr></div>
+            <h1>Related Commands</h1>
+            <a href="./addUser.html">addUser</a>
+            <a href="./removeUser.html">removeUser</a>
+            <a href="./requestData.html">requestData</a>
+            <a href="./updateUser.html">updateUser</a>
+            <div class="gap"><hr></div>
+            <h1>Invalid Conditions</h1>
+            <h2>Username already registered.</h2>
+            <h2>Username not found.</h2>
+        </div>
+        <div class="examples">
+            <div id="1" class="example">
+                <h1>Example - Registering A Bedrock Account</h1>
+                <h2>/register SomeMineGame Bedrock</h2>
+                <hr>
+                <h1>Sample Data</h1>
+                <h2>Player Not Registered</h2>
+                <hr>
+                <h1>Result</h1>
+                <h2>This will change the player's Discord nickname to <em>.SomeMineGame</em>, add them to the database, and whitelist them on the server.</h2>
+            </div>
+            <div class="gap"><hr></div>
+            <div id="2" class="example">
+                <h1>Example - Registering A Java Account</h1>
+                <h2>/register SomeMineGame Java</h2>
+                <hr>
+                <h1>Sample Data</h1>
+                <h2>Player Not Registered</h2>
+                <hr>
+                <h1>Result</h1>
+                <h2>This will change the player's Discord nickname to <em>SomeMineGame</em>, add them to the database, and whitelist them on the server.</h2>
+            </div>
+            <div class="gap"><hr></div>
+            <div id="3" class="example">
+                <h1>Example - Updating Username</h1>
+                <h2>/register SomeMineGame Java</h2>
+                <hr>
+                <h1>Sample Data</h1>
+                <h2>Player is moving from their Bedrock account, "Sample Username".</h2>
+                <hr>
+                <h1>Result</h1>
+                <h2>The account <em>.Sample_Username</em> is removed from the whitelist, and <em>SomeMineGame</em> is added. The Discord nickname is also changed.</h2>
+            </div>
+        </div>
+    </div>
+<footer>
+    <ul style="padding: 3px 10px">
+        <li class="left">Site Created By: SomeMineGame</li>
+        <li class="right">Page Last Edited: January 20, 2026 at 11:35 AM</li>
+    </ul>
+</footer>
+</body>
+</html>

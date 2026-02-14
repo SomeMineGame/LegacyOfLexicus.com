@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#56e2ff">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="addMoney">
+    <meta property="og:url" content="https://development.legacyoflexicus.com/Commands/addMoney.html">
+    <meta property="og:description" content="Adds money to a player's bank. Used when there was a bug and either too much money was taken, or not enough given.">
+    <meta property="og:image" content="https://legacyoflexicus.com/assets/Logo.png">
+    <title>addMoney</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/Commands/commands.css">
+</head>
+<body>
+    <ul id="homeul">
+        <li class="right"><img class="logo" src="/assets/Logo.png" alt="Legacy Of Lexicus Logo"></li>
+        <li class="sitename">Legacy Of Lexicus Wiki</li>
+        <li class="menutop"><a class="menu">Menu</a>
+            <ul class="menuelements">
+                <li><a href="/Home.html">Home</a></li>
+                <li><a class="active" href="/Commands.html">Discord-Commands</a></li>
+                <li><a href="/Plugins.html">Plugins</a></li>
+                <li><a href="/Datapacks.html">Datapacks</a></li>
+                <li><a href="/Lawbook.html">Lawbook</a></li>
+                <li><a href="/News.html">News</a></li>
+            </ul>
+        </li>
+    </ul>
+    <h1 class="warning" style="background-color: yellow; color: black">LegacyOfLexicus.com IS STILL UNDER CONSTRUCTION. EXPECT BUGS.</h1>
+    <div class="maingrid">
+        <div class="info">
+            <h1>Command<a class="back" href="../Commands.html">Back</a></h1>
+            <h2>/addMoney</h2>
+            <hr>
+            <h1>Description</h1>
+            <h2>Adds money to a player's bank. Used when there was a bug and either too much money was taken, or not enough given.</h2>
+            <hr>
+            <h1>Permission</h1>
+            <h2>Economy Admin</h2>
+            <hr>
+            <h1>Syntax</h1>
+            <h2>/addMoney &lt;player&gt; &lt;amount&gt;</h2>
+            <hr>
+            <h1>Arguments</h1>
+            <div class="args">
+                <h2><em>player</em> is the player to receive the money. Required.</h2>
+                <h2><em>amount</em> is the amount of money to give the player. Must be larger than 0. Required.</h2>
+            </div>
+        </div>
+        <div class="links">
+            <h1>Examples</h1>
+            <a href="#1">Adding Money To A Player</a>
+            <div class="gap"><hr></div>
+            <h1>Related Commands</h1>
+            <a href="./forceClockOut.html">forceClockOut</a>
+            <a href="./removeMoney.html">removeMoney</a>
+            <a href="./setMoney.html">setMoney</a>
+            <div class="gap"><hr></div>
+            <h1>Invalid Conditions</h1>
+            <h2>Negative amount provided.</h2>
+        </div>
+        <div class="examples">
+            <div id="1" class="example">
+                <h1>Example - Adding Money To A Player</h1>
+                <h2>/addMoney SomeMineGame 300.75</h2>
+                <hr>
+                <h1>Result</h1>
+                <h2>SomeMineGame will gain $300.75 to his bank account.</h2>
+            </div>
+        </div>
+    </div>
+<footer>
+    <ul style="padding: 3px 10px">
+        <li class="left">Site Created By: SomeMineGame</li>
+        <li class="right">Page Last Edited: January 22, 2026 at 8:21 PM</li>
+    </ul>
+</footer>
+</body>
+</html>

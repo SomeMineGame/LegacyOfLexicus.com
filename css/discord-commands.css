@@ -49,6 +49,12 @@
         color: lemonchiffon;
     }
 
+    h3 {
+        font-size: 3.5vw;
+        font-style: italic;
+        color: yellow;
+    }
+
     .hidden {
         display: none !important;
     }
@@ -106,6 +112,12 @@
         font-size: 2.25vw;
         text-align: center;
         color: lemonchiffon;
+    }
+
+    h3 {
+        font-size: 1.25vw;
+        font-style: italic;
+        color: yellow;
     }
 
     .hidden {

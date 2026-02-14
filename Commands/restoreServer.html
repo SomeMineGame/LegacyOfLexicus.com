@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#56e2ff">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="register">
+    <meta property="og:url" content="https://development.legacyoflexicus.com/Commands/register.html">
+    <meta property="og:description" content="Whitelists a player's Minecraft account on the Minecraft server, sets their Discord server nickname to their Minecraft username, and adds them to the database. Bedrock usernames are prefixed with a &quot;.&quot;. Also works for updating a username. The old username will be removed from the whitelist.">
+    <meta property="og:image" content="https://legacyoflexicus.com/assets/Logo.png">
+    <title>restoreServer</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/Commands/commands.css">
+</head>
+<body>
+    <ul id="homeul">
+        <li class="right"><img class="logo" src="/assets/Logo.png" alt="Legacy Of Lexicus Logo"></li>
+        <li class="sitename">Legacy Of Lexicus Wiki</li>
+        <li class="menutop"><a class="menu">Menu</a>
+            <ul class="menuelements">
+                <li><a href="/Home.html">Home</a></li>
+                <li><a class="active" href="/Commands.html">Discord-Commands</a></li>
+                <li><a href="/Plugins.html">Plugins</a></li>
+                <li><a href="/Datapacks.html">Datapacks</a></li>
+                <li><a href="/Lawbook.html">Lawbook</a></li>
+                <li><a href="/News.html">News</a></li>
+            </ul>
+        </li>
+    </ul>
+    <h1 class="warning" style="background-color: yellow; color: black">LegacyOfLexicus.com IS STILL UNDER CONSTRUCTION. EXPECT BUGS.</h1>
+    <div class="maingrid">
+        <div class="info">
+            <h1>Command<a class="back" href="../Commands.html">Back</a></h1>
+            <h2>/restoreServer</h2>
+            <hr>
+            <h1>Description</h1>
+            <h2>Creates an archive of a Discord server's files before restoring them from an archive. Archives are listed with `/listOldServers`.</h2>
+            <hr>
+            <h1>Permission</h1>
+            <h2>Bot Admin</h2>
+            <hr>
+            <h1>Syntax</h1>
+            <h2>/restoreServer &lt;username&gt; &lt;archive&gt; [resetname]</h2>
+            <hr>
+            <h1>Arguments</h1>
+            <div class="args">
+                <h2><em>username</em> is the name of the player running the command. This acts as confirmation. Required.</h2>
+                <h2><em>archive</em> is the name of the archive you want to restore.</h2>
+                <h2><em>resetname</em> is the name for the archive. Spaces are replaced with dashes (-). Uses the bot's current timestamp if not provided. Optional.</h2>
+            </div>
+        </div>
+        <div class="links">
+            <h1>Examples</h1>
+            <a href="#1">View List of Old Servers</a>
+            <div class="gap"><hr></div>
+            <h1>Related Commands</h1>
+            <a href="./addServer.html">addServer</a>
+            <a href="./resetServer.html">resetServer</a>
+            <a href="./restoreServer.html">restoreServer</a>
+            <div class="gap"><hr></div>
+            <h1>Invalid Conditions</h1>
+            <h2>Discord server not yet added.</h2>
+            <h2>Discord server has never been reset.</h2>
+        </div>
+        <div class="examples">
+            <div id="1" class="example">
+                <h1>Example - Reset Server Without Name</h1>
+                <h2>/resetServer SomeMineGame Testing-Server</h2>
+                <hr>
+                <h1>Sample Data</h1>
+                <h2>Current Time On The Server:<br><em>January 18, 2026 at 9:45 PM</em></h2>
+                <hr>
+                <h1>Result</h1>
+                <h2>The server is archived with the name <em>January-18-2026</em>, provided there wasn't already an unnamed reset for the day. Then, <em>Testing-Server</em> is recovered.</h2>
+            </div>
+            <div class="gap"><hr></div>
+            <div id="2" class="example">
+                <h1>Example - Reset Server With Name</h1>
+                <h2>/resetserver SomeMineGame Testing-Server LegacyOfLexicus</h2>
+                <hr>
+                <h1>Result</h1>
+                <h2>This will put all the files in the current server into an archive called<br><em>LegacyOfLexicus</em>, provided the name isn't already in use. Then <br class="mobile"><em>Testing-Server</em> is recovered.</h2>
+            </div>
+        </div>
+    </div>
+<footer>
+    <ul style="padding: 3px 10px">
+        <li class="left">Site Created By: SomeMineGame</li>
+        <li class="right">Page Last Edited: January 19, 2026 at 9:45 PM</li>
+    </ul>
+</footer>
+</body>
+</html>

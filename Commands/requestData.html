@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#56e2ff">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="requestData">
+    <meta property="og:url" content="https://development.legacyoflexicus.com/Commands/requestData.html">
+    <meta property="og:description" content="Requests a player's files from the Discord bot. A player can either request their own data or request that an admin do it on their behalf. This is a standard data rights accommodation.">
+    <meta property="og:image" content="https://legacyoflexicus.com/assets/Logo.png">
+    <title>requestData</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/Commands/commands.css">
+</head>
+<body>
+    <ul id="homeul">
+        <li class="right"><img class="logo" src="/assets/Logo.png" alt="Legacy Of Lexicus Logo"></li>
+        <li class="sitename">Legacy Of Lexicus Wiki</li>
+        <li class="menutop"><a class="menu">Menu</a>
+            <ul class="menuelements">
+                <li><a href="/Home.html">Home</a></li>
+                <li><a class="active" href="/Commands.html">Discord-Commands</a></li>
+                <li><a href="/Plugins.html">Plugins</a></li>
+                <li><a href="/Datapacks.html">Datapacks</a></li>
+                <li><a href="/Lawbook.html">Lawbook</a></li>
+                <li><a href="/News.html">News</a></li>
+            </ul>
+        </li>
+    </ul>
+    <h1 class="warning" style="background-color: yellow; color: black">LegacyOfLexicus.com IS STILL UNDER CONSTRUCTION. EXPECT BUGS.</h1>
+    <div class="maingrid">
+        <div class="info">
+            <h1>Command<a class="back" href="../Commands.html">Back</a></h1>
+            <h2>/requestData</h2>
+            <hr>
+            <h1>Description</h1>
+            <h2>Requests a player's files from the Discord bot. A player can either request their own data or request that an admin do it on their behalf. This is a standard data rights accommodation. If you no longer have access to the Discord server, you can DM an admin with your request. Alternatively, you can email help@legacyoflexicus.com with proof of account ownership.</h2>
+            <br>
+            <h2>If an admin requests a player's data without that player's explicit permission, they will be removed from the role. Requests are logged and sent to an admin channel, so we'll know of abuse.</h2>
+            <hr>
+            <h1>Permission</h1>
+            <h2>Everyone OR Bot Admin</h2>
+            <hr>
+            <h1>Syntax</h1>
+            <h2>/requestData [player]</h2>
+            <hr>
+            <h1>Arguments</h1>
+            <div class="args">
+                <h2><em>player</em> is the player to request the files of. This is a Bot Admin only argument. Optional.</h2>
+            </div>
+        </div>
+        <div class="links">
+            <h1>Examples</h1>
+            <a href="#1">Requesting Own Data</a>
+            <a href="#2">Request Another Player's Data</a>
+            <div class="gap"><hr></div>
+            <h1>Related Commands</h1>
+            <a href="./addUser.html">addUser</a>
+            <a href="./register.html">register</a>
+            <a href="./removeUser.html">removeUser</a>
+            <a href="./updateUser.html">updateUser</a>
+            <div class="gap"><hr></div>
+            <h1>Invalid Conditions</h1>
+            <h2>Player files don't exist.</h2>
+            <h2>Player without Bot Admin provided another player's username.</h2>
+        </div>
+        <div class="examples">
+            <div id="1" class="example">
+                <h1>Example - Requesting Own Data</h1>
+                <h2>/requestData</h2>
+                <hr>
+                <h1>Result</h1>
+                <h2>This will send the player a zip file of their data.</h2>
+            </div>
+            <div class="gap"><hr></div>
+            <div id="2" class="example">
+                <h1>Example - Removing Another Player's Account</h1>
+                <h2>/requestData SomeMineGame</h2>
+                <hr>
+                <h1>Result</h1>
+                <h2>If the player that ran the command is a Bot Admin, a zip file of SomeMineGame's data will be sent to the admin channel.</h2>
+            </div>
+        </div>
+    </div>
+<footer>
+    <ul style="padding: 3px 10px">
+        <li class="left">Site Created By: SomeMineGame</li>
+        <li class="right">Page Last Edited: January 21, 2026 at 9:08 PM</li>
+    </ul>
+</footer>
+</body>
+</html>

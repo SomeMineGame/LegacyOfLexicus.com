@@ -1,0 +1,57 @@
+@media screen and (max-width: 720px) {
+    .info {
+        grid-area: 1/1/1/6;
+    }
+
+    body {
+        text-align: center;
+        color: aliceblue;
+    }
+
+    h1 {
+        font-size: 8vw;
+    }
+
+    h2 {
+        font-size: 6.25vw;
+    }
+
+    h2 a {
+        color: aliceblue;
+    }
+    
+    img {
+        max-width: 95vw;
+    }
+}
+
+@media screen and (min-width: 721px) {
+    .info {
+        grid-area: 1/2/1/10;
+    }
+
+    body {
+        text-align: center;
+        color: aliceblue;
+    }
+
+    h1 {
+        font-size: 2vw;
+    }
+
+    h2 {
+        font-size: 1.5vw;
+    }
+
+    h2 a {
+        color: aliceblue;
+    }
+
+    .info img {
+        height: 10vw;
+    }
+
+    ul {
+        z-index: 1;
+    }
+}

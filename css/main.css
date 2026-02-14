@@ -4,19 +4,18 @@
         margin-bottom: 9vw;
     }
 
-    body ul {
+    ul {
         display: flow-root;
         list-style-type: none;
         margin: 0;
         padding: 0;
-        -webkit-user-select: none;
         background-color: #444;
         position: -webkit-sticky;
         position: sticky;
         top: 0;
     }
 
-    body li {
+    li {
         font-size: 4vw;
     }
 
@@ -80,12 +79,7 @@
         overflow-wrap: break-word;
         position: fixed;
         bottom: 0;
-        width:96%;
-    }
-
-    .maingrid {
-        display: grid;
-        grid-template-columns: 20% 20% 20% 20% 20%;
+        width: calc(100vw - (100vw - 100%) - 16px);
     }
 
     footer li{
@@ -97,6 +91,11 @@
         text-align: initial;
         padding: initial;
         text-decoration: none;
+    }
+
+    .maingrid {
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
     }
 
     .left {
@@ -147,15 +146,18 @@
         text-align: center;
     }
 
+    .desktop {
+        display: none;
+    }
 }
 
 @media screen and (min-width:721px){
     body {
         background-color: #333;
-        margin-bottom: 1.5vw;
+        margin-bottom: 2vw;
     }
 
-    body ul {
+    ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
@@ -167,7 +169,7 @@
         text-align: center;
     }
 
-    body li {
+    li {
         float: left;
         font-size: 1.5vw;
     }
@@ -213,7 +215,7 @@
         font-size: 1vw;
         position:fixed;
         bottom: 0;
-        width: 99%;
+        width: calc(100vw - (100vw - 100%) - 16px);
     }
 
     footer ul li a{
@@ -221,11 +223,6 @@
         text-align: initial;
         padding: initial;
         text-decoration: none;
-    }
-
-    .maingrid {
-        display: grid;
-        grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
     }
 
     footer li{
@@ -242,6 +239,11 @@
         float: right;
     }
 
+    .maingrid {
+        display: grid;
+        grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    }
+
     img {
         max-width: 80vw;
     }
@@ -250,5 +252,9 @@
         font-size: 1.5vw !important;
         text-align: center;
         padding: 5px;
+    }
+
+    .mobile {
+        display: none;
     }
 }
