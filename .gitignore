@@ -1,4 +1,5 @@
-/Extra
+Extra/*
+!Extra/Anti_Xray_Full_1.21.10.zip
 /css/extras
 /css/extra
 CreateFiles.py
