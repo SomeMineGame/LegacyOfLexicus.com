@@ -1,127 +1,158 @@
-@media screen and (max-width: 720px) {
+/* Shared */
+body {
+    text-align: center;
+}
+
+.title {
+    color: aliceblue;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: white 0px 0px 15px;
+    padding: 10px 5px;
+}
+
+table {
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 0 1vw;
+    border: 2px solid #777;
+    border-radius: 10px;
+    background-color: rgba(90, 90, 90, 0.8);
+    box-shadow: #777 0px 0px 15px;
+    margin-bottom: 1.5vw;
+    padding: 10px 5px;
+}
+
+.element {
+    cursor: pointer;
+    box-shadow: white 0px 0px 15px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: white 0px 0px 15px;
+}
+
+.element td {
+    border: 2px solid white;
+    border-radius: 10px;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+}
+
+.command {
+    color:indianred;
+    text-shadow: 0 0 2px palevioletred;
+}
+
+.desc {
+    color: green;
+    text-shadow: 0 0 2px darkgreen;
+}
+
+.command{
+    border-right: none !important;
+    border-radius: 10px 0px 0px 10px !important;
+}
+
+.desc {
+    border-left: none !important;
+    border-radius: 0px 10px 10px 0px !important;
+}
+
+h2 {
+    font-style: italic;
+    color: yellow;
+}
+
+h3 {
+    border: 2px solid lemonchiffon;
+    border-radius: 10px;
+    box-shadow: lemonchiffon 0px 0px 15px;
+    background-color: rgba(255, 255, 210, 0.6);
+    text-align: center;
+    color: lemonchiffon;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+@media screen and (max-width:720px) {
     .maincontainer {
         grid-area: 1/1/1/6;
-        text-align: center;
     }
 
     .title {
-        color: aliceblue;
-        font-size: 6vw;
-        text-align: center;
+        font-size: 5vw;
     }
 
     table {
         grid-area: 2/1/2/6;
-        text-align: center;
-        border-collapse: separate;
-        border-spacing: 0 1vw;
-        margin-bottom: 1.5vw;
     }
 
     .command {
         width: 35vw;
         font-size: 4vw;
-        color: indianred;
     }
 
     .desc {
         width: 65vw;
         font-size: 4vw;
-        color: indianred;
-    }
-
-    .element {
-        outline: 0.5vw outset black;
-        background-color:linen;
-        cursor: pointer;
     }
 
     .element td {
-        padding-top: 1vw;
-        padding-bottom: 1vw;
         font-size:4vw;
         height: 9vw;
     }
 
     h2 {
-        font-size: 7vw;
-        text-align: center;
-        color: lemonchiffon;
+        font-size: 3.5vw;
     }
 
     h3 {
-        font-size: 3.5vw;
-        font-style: italic;
-        color: yellow;
-    }
-
-    .hidden {
-        display: none !important;
+        font-size: 6vw;
+        max-width: 90vw;
+        padding: 1.5vw 3vw;
+        display: inline-block;
     }
 }
 
-@media screen and (min-width: 721px) {
-    body {
-        text-align: center;
-    }
-
+@media screen and (min-width:721px) and (max-width:1280px){
     .maincontainer {
         grid-area: 1/2/1/10;
     }
 
     .title {
-        color: aliceblue;
-        font-size: 2vw;
-        text-align: center;
         grid-area: 1/2/1/10;
         margin-bottom: none;
+        font-size: 2vw;
     }
 
     table {
         grid-area: 2/2/2/10;
-        text-align: center;
-        border-collapse: separate;
-        border-spacing: 0 1vw;
-        margin-bottom: 1.5vw;
     }
 
     .command {
         width: 30vw;
         font-size: 2vw;
-        color: indianred;
     }
 
     .desc {
         width: 60vw;
         font-size: 2vw;
-        color: indianred;
-    }
-
-    .element {
-        outline: 0.5vw outset black;
-        background-color:linen;
-        cursor: pointer;
-    }
-
-    .element td {
-        padding-top: 1vw;
-        padding-bottom: 1vw;
     }
 
     h2 {
-        font-size: 2.25vw;
-        text-align: center;
-        color: lemonchiffon;
+        font-size: 1.25vw;
     }
 
     h3 {
-        font-size: 1.25vw;
-        font-style: italic;
-        color: yellow;
-    }
-
-    .hidden {
-        display: none !important;
+        font-size: 2.25vw;
+        max-width: 50vw;
+        padding: 0.25vw 1vw;
+        display: inline-block;
     }
 
     .tags {
@@ -129,4 +160,49 @@
         font-size: 1.25vw;
         margin-top:2vw;
     }
+
+}
+
+@media screen and (min-width:1281px){
+    .maincontainer {
+        grid-area: 1/2/1/10;
+    }
+
+    .title {
+        grid-area: 1/2/1/10;
+        margin-bottom: none;
+        font-size: 2vw;
+    }
+
+    table {
+        grid-area: 2/2/2/10;
+    }
+
+    .command {
+        width: 30vw;
+        font-size: 1.5vw;
+    }
+
+    .desc {
+        width: 60vw;
+        font-size: 1.5vw;
+    }
+
+    h2 {
+        font-size: 1vw;
+    }
+
+    h3 {
+        font-size: 1.75vw;
+        max-width: 50vw;
+        padding: 0.25vw 1vw;
+        display: inline-block;
+    }
+
+    .tags {
+        width: 25vw;
+        font-size: 1.25vw;
+        margin-top:2vw;
+    }
+
 }

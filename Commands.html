@@ -9,17 +9,31 @@
     <script>
         function search_tags() {
             let input = document.getElementById('Tags').value.toLowerCase();
+            let tbs = document.getElementsByTagName('table');
             let trs = document.getElementsByTagName('tr');
             let h1s = document.getElementsByTagName('h1')
-            let h2s = document.getElementsByTagName('h2');
+            let h3s = document.getElementsByTagName('h3');
             let footer = document.getElementById('footer');
           
             let noElementsFound = true;
           
+            for (let i = 0; i < tbs.length; i++) {
+                let tb = tbs[i];
+                let tbId = (tb.id || "").toLowerCase();
+                let tbTags = (tb.getAttribute("class") || "").toLowerCase();
+
+                if (tbId.includes(input) || tbTags.includes(input)) {
+                    tb.classList.remove("hidden");
+                    noElementsFound = false;
+                } else {
+                    tb.classList.add("hidden");
+                }
+            }
+          
             for (let i = 0; i < trs.length; i++) {
                 let tr = trs[i];
                 let trId = (tr.id || "").toLowerCase();
-                let trTags = (tr.getAttribute("datatags") || "").toLowerCase();
+                let trTags = (tr.getAttribute("class") || "").toLowerCase();
 
                 if (trId.includes(input) || trTags.includes(input)) {
                     tr.classList.remove("hidden");
@@ -32,9 +46,9 @@
             for (let i = 0; i < h1s.length; i++) {
                 let h1 = h1s[i];
                 let h1Id = (h1.id || "").toLowerCase();
-                let h1Tags = (h1.getAttribute("datatags") || "").toLowerCase();
+                let h1Tags = (h1.getAttribute("class") || "").toLowerCase();
 
-                if (h1Id.includes(input) || h1Tags.includes(input)) {
+                if ((h1Id.includes(input) || h1Tags.includes(input)) && !h1.classList.contains("title")) {
                     h1.classList.remove("hidden");
                     noElementsFound = false;
                 } else {
@@ -42,16 +56,16 @@
                 }
                 }
           
-            for (let i = 0; i < h2s.length; i++) {
-                let h2 = h2s[i];
-                let h2Id = (h2.id || "").toLowerCase();
-                let h2Tags = (h2.getAttribute("datatags") || "").toLowerCase();
+            for (let i = 0; i < h3s.length; i++) {
+                let h3 = h3s[i];
+                let h3Id = (h3.id || "").toLowerCase();
+                let h3Tags = (h3.getAttribute("class") || "").toLowerCase();
 
-                if (h2Id.includes(input) || h2Tags.includes(input)) {
-                    h2.classList.remove("hidden");
+                if (h3Id.includes(input) || h3Tags.includes(input)) {
+                    h3.classList.remove("hidden");
                     noElementsFound = false;
                 } else {
-                    h2.classList.add("hidden");
+                    h3.classList.add("hidden");
                 }
                 }
           
@@ -69,7 +83,7 @@
     <ul id="homeul">
         <li class="right"><img class="logo" src="/assets/Logo.png" alt="Legacy Of Lexicus Logo"></li>
         <li class="sitename">Legacy Of Lexicus Wiki</li>
-        <li class="menutop"><a class="menu">Menu</a>
+        <li class="menutop"><a class="menu active">Menu</a>
             <ul class="menuelements">
                 <li><a href="/Home.html">Home</a></li>
                 <li><a class="active" href="/Commands.html">Discord-Commands</a></li>
@@ -84,11 +98,11 @@
     <div class="maingrid">
         <div class="maincontainer">
             <h1 class="title">These commands are used on the Discord server to add extra functionality to the Minecraft server. They are custom coded by SomeMineGame in a Discord bot written in Python. There are still new commands being added to the server every so often! Click on a command to learn more about it! Current Prefix - <code>/</code></h1>
-            <h3>Items marked with * are still in development.</h3>
+            <h2>Items marked with * are still in development.</h2>
             <div><input class="tags" id="Tags" onkeyup="search_tags()" oninput="search_tags()" type="search" name="tag" placeholder="Search Commands..."></div>
-            <h2 datatags="addBase editBase removeBase viewBase">Base Commands</h2>
-            <table>
-                <tr datatags="addBase editBase removeBase teleportBase viewBase">
+            <h3 class="addBase editBase removeBase viewBase">Base Commands</h3>
+            <table class="addBase editBase removeBase viewBase">
+                <tr class="addBase editBase removeBase viewBase">
                     <th class="command">Command</th>
                     <th class="desc">Short Description</th>
                 </tr>
@@ -109,9 +123,9 @@
                     <td class="desc">Gives the location of a base</td>
                 </tr>
             </table>
-            <h2 datatags="addServer addUser listOldServers register removeUser requestData resetServer restoreServer update updateUser">Database Commands</h2>
-            <table>
-                <tr datatags="addServer addUser listOldServers register resetServer restoreServer update">
+            <h3 class="addServer addUser listOldServers register removeUser requestData resetServer restoreServer update updateUser">Database Commands</h3>
+            <table class="addServer addUser listOldServers register resetServer restoreServer update">
+                <tr class="addServer addUser listOldServers register resetServer restoreServer update">
                     <th class="command">Command</th>
                     <th class="desc">Short Description</th>
                 </tr>
@@ -156,9 +170,9 @@
                     <td class="desc">Creates a Discord server's files</td>
                 </tr>
             </table>
-            <h2 datatags="addMoney bank buy charity clockIn clockOut drawLottery enchant forceClockOut govtBuy govtSell inflation lottery pay payGovt price removeMoney sell setMoney taxBal taxPay voidBuy voidSell wealthy">Economy Commands</h2>
-            <table>
-                <tr datatags="addMoney bank buy charity clockIn clockOut drawLottery enchant forceClockOut govtBuy govtSell inflation lottery pay payGovt price removeMoney sell setMoney taxBal taxPay voidBuy voidSell wealthy">
+            <h3 class="addMoney bank buy charity clockIn clockOut drawLottery enchant forceClockOut govtBuy govtSell inflation lottery pay payGovt price removeMoney sell setMoney taxBal taxPay voidBuy voidSell wealthy">Economy Commands</h3>
+            <table class="addMoney bank buy charity clockIn clockOut drawLottery enchant forceClockOut govtBuy govtSell inflation lottery pay payGovt price removeMoney sell setMoney taxBal taxPay voidBuy voidSell wealthy">
+                <tr class="addMoney bank buy charity clockIn clockOut drawLottery enchant forceClockOut govtBuy govtSell inflation lottery pay payGovt price removeMoney sell setMoney taxBal taxPay voidBuy voidSell wealthy">
                     <th class="command">Command</th>
                     <th class="desc">Short Description</th>
                 </tr>
@@ -267,13 +281,13 @@
                     <td class="desc">View the richest players</td>
                 </tr>
             </table>
-            <h2 datatags="addNation addSentence editNation editSentence releasePrisoner reportIncident viewSentence">Legal Commands</h2>
-            <table>
-                <tr datatags="addNation addSentence editNation editSentence releasePrisoner reportIncident viewSentence">
+            <h3 class="addNation addSentence editNation editSentence releasePrisoner reportIncident viewSentence">Legal Commands</h3>
+            <table class="addNation addSentence editNation editSentence releasePrisoner reportIncident viewSentence">
+                <tr class="addNation addSentence editNation editSentence releasePrisoner reportIncident viewSentence">
                     <th class="command">Command</th>
                     <th class="desc">Short Description</th>
                 </tr>
-                <tr id="addNation" class="element" onclick="window.location='/Commands/addnation.html'">
+                <tr id="addNation" class="element" onclick="window.location='/Commands/addNation.html'">
                     <td class="command"><em>addNation*</em></td>
                     <td class="desc">Gives a nation independence</td>
                 </tr>
@@ -302,9 +316,9 @@
                     <td class="desc">Views a player's prison file</td>
                 </tr>
             </table>
-            <h2 datatags="cmd day help ip status test">Miscellaneous Commands</h2>
-            <table>
-                <tr datatags="amendPoll cmd day help ip poll status test">
+            <h3 class="cmd day help ip status test">Miscellaneous Commands</h3>
+            <table class="cmd day help ip status test">
+                <tr class="cmd day help ip status test">
                     <th class="command">Command</th>
                     <th class="desc">Short Description</th>
                 </tr>
@@ -335,7 +349,6 @@
             </table>
         </div>
     </div>
-</body>
 <footer id="footer">
     <ul style="padding: 3px 10px">
         <li class="left">Site Created By: <a href="https://someminegame.com">SomeMineGame</a></li>

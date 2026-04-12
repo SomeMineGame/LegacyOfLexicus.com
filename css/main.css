@@ -1,85 +1,145 @@
-@media screen and (max-width:720px){
+@font-face {
+    font-family: 'Minecrafter Alt';
+    src: url('https://development.legacyoflexicus.com/assets/Minecrafter.Alt.ttf');
+}
+
+/* Shared */
+body {
+    background-color: black;
+}
+
+#homeul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    border: 1px solid white;
+}
+
+#homeul img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#homeul li a {
+    background-color: rgba(0, 255, 255, 0.1);
+    border: 2px solid transparent;
+    margin: -2px;
+    z-index: 0;
+    color: #00aaaa;
+    padding: 10px 16px;
+    text-decoration: none;
+}
+
+#homeul li a:hover {
+    background-color: rgba(0, 255, 255, 0.2);
+    border: 2px solid cyan;
+    margin: -2px;
+    z-index: 1;
+    color: cyan;
+}
+
+.active {
+    background-color: rgba(0, 255, 255, 0.4) !important;
+    border: 2px solid cyan !important;
+    margin: -2px;
+    position: relative;
+    z-index: 2;
+    box-shadow: cyan 0px 0px 5px !important;
+    color: cyan !important;
+}
+
+.sitename {
+    padding: 10px 16px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: cyan;
+    font-family: 'Minecrafter Alt', 'Courier New', Courier, monospace;
+}
+
+.warning {
+    border: 2px solid gold !important;
+    border-radius: 10px;
+    box-shadow: yellow 0px 0px 5px !important;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    text-align: center;
+    position:fixed;
+    bottom: 0;
+    width: calc(100vw - (100vw - 100%) - 18px);
+}
+
+footer ul {
+    margin: 0;
+    padding: 0;
+}
+
+footer ul li {
+    display: block;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+@media screen and (max-width:720px) {
     body {
-        background-color: #333;
-        margin-bottom: 9vw;
+        margin-bottom: 13vw;
     }
 
-    ul {
+    #homeul {
         display: flow-root;
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        background-color: #444;
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
     }
 
-    li {
+    #homeul li {
         font-size: 4vw;
-    }
-
-    li {
         display: block;
     }
 
-    li a {
+    #homeul li a {
         display: none;
-        text-align: center;
-        padding: 10px 16px;
-        color: aliceblue;
-        text-decoration: none;
-    }
-
-    li a:hover {
-        background-color: #222;
     }
 
     .menu {
-        display: block;
+        display: block !important;
         float: left;
     }
 
     .menuelements {
         position: absolute;
-        margin-top: calc(4vw + 20px);
+        margin-top: calc(4vw + 26px);
         clear: both;
         float: left;
     }
 
     .menutop:hover ul li a{
-        display: block;
+        display: block !important;
+        background-color: black !important;
     }
 
     .sitename {
-        padding: 10px 16px;
         margin: 0;
-        float: right;
-        color: cyan;
-        font-family: monospace;
+        right: calc(3.5vw + 16px);
     }
 
-    ul img {
-        padding-top: 4px;
-        padding-right: 4px;
-        margin: 0;
-        float: right;
+    #homeul img {   
         width: calc(3.5vw + 16px);
-    }
-
-    .active {
-        background-color: #2a2a2a;
+        right: 1vw;
     }
 
     footer {
-        background-color:lightslategray;
-        color: black;
-        text-align: center;
-        font-size: 3vw;
         overflow-wrap: break-word;
-        position: fixed;
-        bottom: 0;
-        width: calc(100vw - (100vw - 100%) - 16px);
+        font-size: 3vw;
     }
 
     footer li{
@@ -93,11 +153,6 @@
         text-decoration: none;
     }
 
-    .maingrid {
-        display: grid;
-        grid-template-columns: 20% 20% 20% 20% 20%;
-    }
-
     .left {
         color: aliceblue;
         float: none;
@@ -108,37 +163,9 @@
         float: none;
     }
 
-    img {
-        max-width: 95vw;
-    }
-
-    figure {
-        display: inline-block;
-        width: 44vw;
-        margin: 1vw;
-        vertical-align: top;
-    }
-
-    figure img {
-        width: 44vw;
-    }
-
-    figure figcaption {
-        font-size: 4.5vw;
-        margin-top: 1vh;
-        color: aliceblue;
-        text-align: center;
-    }
-
-    .data {
-        border: outset 4px #555;
-        background-color: #777;
-        width: 90vw;
-    }
-
-    .data h2 {
-        text-align: left;
-        margin-left: 1.5vw;
+    .maingrid {
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
     }
 
     .warning {
@@ -151,78 +178,51 @@
     }
 }
 
-@media screen and (min-width:721px){
+@media screen and (min-width:721px) and (max-width:1280px){
     body {
-        background-color: #333;
-        margin-bottom: 2vw;
+        margin-bottom: 4vw;
     }
 
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: #444;
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
+    #homeul {
         text-align: center;
+        display: flex;
+        justify-content: left;
+        border-radius: 10px;
     }
 
-    li {
-        float: left;
+    #homeul li {
+        display: flex;
         font-size: 1.5vw;
+        border-radius: 10px;
     }
 
-    li a {
+    #homeul li a {
         display: block;
         text-align: center;
-        padding: 10px 16px;
-        color: aliceblue;
-        text-decoration: none;
-    }
-
-    li a:hover {
-        background-color: #222;
+        border-radius: 10px;
     }
 
     .menu {
-        display: none;
+        display: none !important;
+    }
+
+    .menuelements {
+        display: flex;
+        margin: 0;
+        padding: 0;
     }
 
     .sitename {
-        padding: 10px 16px;
-        float: right;
-        color: cyan;
-        font-family: 'Courier New', Courier, monospace;
+        right: calc(1.5vw + 16px);
     }
 
-    ul img {
-        padding-top: 4px;
-        padding-right: 4px;
-        float: right;
+    #homeul img {   
         width: calc(1.5vw + 16px);
+        right: 0.3vw;
     }
 
-    .active {
-        background-color: #2a2a2a;
-    }
-
-    footer {
-        background-color:lightslategray;
-        color: black;
-        text-align: center;
-        font-size: 1vw;
-        position:fixed;
-        bottom: 0;
-        width: calc(100vw - (100vw - 100%) - 16px);
-    }
-
-    footer ul li a{
-        display: initial;
-        text-align: initial;
-        padding: initial;
-        text-decoration: none;
+    footer ul {
+        display: flow-root;
     }
 
     footer li{
@@ -244,8 +244,76 @@
         grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
     }
 
-    img {
-        max-width: 80vw;
+    .warning {
+        font-size: 1.5vw !important;
+        text-align: center;
+        padding: 5px;
+    }
+
+    .mobile {
+        display: none;
+    }
+}
+
+@media screen and (min-width:1281px){
+    body {
+        margin-bottom: 3vw;
+    }
+
+    #homeul {
+        text-align: center;
+        display: flex;
+        justify-content: left;
+        border-radius: 10px;
+    }
+
+    #homeul li {
+        display: flex;
+        font-size: 1.5vw;
+    }
+
+    #homeul li a {
+        display: block;
+        text-align: center;
+        border-radius: 10px;
+    }
+
+    .menuelements {
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu {
+        display: none !important;
+    }
+
+    .sitename {
+        right: calc(1.5vw + 16px);
+    }
+
+    #homeul img {   
+        width: calc(1.5vw + 16px);
+        right: 0.3vw;
+    }
+
+    footer li{
+        font-size: 1.5vw;
+    }
+
+    .left {
+        color: aliceblue;
+        float: left;
+    }
+
+    .right {
+        color: aliceblue;
+        float: right;
+    }
+
+    .maingrid {
+        display: grid;
+        grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
     }
 
     .warning {
