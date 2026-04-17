@@ -8,20 +8,6 @@ h2 a {
     color: aliceblue;
 }
 
-h1 {
-    background-color: rgba(0, 0, 255, 0.3);
-    border: 2px solid blue;
-    border-radius: 10px;
-    box-shadow: blue 0px 0px 15px;
-}
-
-h2 {
-    background-color: rgba(150, 150, 255, 0.3);
-    border: 2px solid blue;
-    border-radius: 10px;
-    box-shadow: blue 0px 0px 15px;
-}
-
 .info img {
     height: 10vw;
 }
