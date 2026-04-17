@@ -1,4 +1,4 @@
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 800px) {
     .info {
         grid-area: 1/1/1/6;
     }
@@ -57,7 +57,7 @@
     }
 }
 
-@media screen and (min-width: 721px) {
+@media screen and (min-width: 801px) {
     .info {
         grid-area: 1/2/1/10;
     }

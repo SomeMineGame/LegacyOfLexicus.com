@@ -43,19 +43,13 @@ table {
 .command {
     color:indianred;
     text-shadow: 0 0 2px palevioletred;
-}
-
-.desc {
-    color: green;
-    text-shadow: 0 0 2px darkgreen;
-}
-
-.command{
     border-right: none !important;
     border-radius: 10px 0px 0px 10px !important;
 }
 
 .desc {
+    color: green;
+    text-shadow: 0 0 2px olivedrab;
     border-left: none !important;
     border-radius: 0px 10px 10px 0px !important;
 }
@@ -79,7 +73,7 @@ h3 {
 }
 
 
-@media screen and (max-width:720px) {
+@media screen and (max-width:800px) {
     .maincontainer {
         grid-area: 1/1/1/6;
     }
@@ -119,7 +113,7 @@ h3 {
     }
 }
 
-@media screen and (min-width:721px) and (max-width:1280px){
+@media screen and (min-width:801px) and (max-width:1280px){
     .maincontainer {
         grid-area: 1/2/1/10;
     }
@@ -136,12 +130,12 @@ h3 {
 
     .command {
         width: 30vw;
-        font-size: 2vw;
+        font-size: 2.5vw;
     }
 
     .desc {
         width: 60vw;
-        font-size: 2vw;
+        font-size: 2.5vw;
     }
 
     h2 {

@@ -1,4 +1,4 @@
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 800px) {
     body {
         color: aliceblue;
     }
@@ -65,7 +65,7 @@
     }
 }
 
-@media screen and (min-width: 721px) {
+@media screen and (min-width: 801px) {
     body {
         color: aliceblue;
     }

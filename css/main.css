@@ -30,7 +30,7 @@ body {
     border: 2px solid transparent;
     margin: -2px;
     z-index: 0;
-    color: #00aaaa;
+    color: #00AAAA;
     padding: 10px 16px;
     text-decoration: none;
 }
@@ -38,6 +38,7 @@ body {
 #homeul li a:hover {
     background-color: rgba(0, 255, 255, 0.2);
     border: 2px solid cyan;
+    position: relative;
     margin: -2px;
     z-index: 1;
     color: cyan;
@@ -73,7 +74,7 @@ footer {
     color: white;
     border: 1px solid white;
     text-align: center;
-    position:fixed;
+    position: fixed;
     bottom: 0;
     width: calc(100vw - (100vw - 100%) - 18px);
 }
@@ -92,7 +93,7 @@ footer ul li a {
     color: aliceblue;
 }
 
-@media screen and (max-width:720px) {
+@media screen and (max-width:800px) {
     body {
         margin-bottom: 13vw;
     }
@@ -178,7 +179,7 @@ footer ul li a {
     }
 }
 
-@media screen and (min-width:721px) and (max-width:1280px){
+@media screen and (min-width:801px) and (max-width:1280px){
     body {
         margin-bottom: 4vw;
     }
@@ -219,6 +220,10 @@ footer ul li a {
     #homeul img {   
         width: calc(1.5vw + 16px);
         right: 0.3vw;
+    }
+
+    footer {
+        border-radius: 8px;
     }
 
     footer ul {
@@ -295,6 +300,14 @@ footer ul li a {
     #homeul img {   
         width: calc(1.5vw + 16px);
         right: 0.3vw;
+    }
+
+    footer {
+        border-radius: 10px;
+    }
+
+    footer ul {
+        display: flow-root;
     }
 
     footer li{

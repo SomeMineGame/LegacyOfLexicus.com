@@ -1,46 +1,98 @@
-@media screen and (max-width: 720px) {
-    body {
-        margin-bottom: 13vw;
+/* Shared */
+em {
+    background-color: #222;
+    font-family: monospace;
+    color: ghostwhite;
+}
+
+.links a {
+    display: block;
+}
+
+#bottom {
+    height: max-content;
+}
+
+.info, .example {
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: white 0px 0px 15px;
+}
+
+.back {
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: black;
+    color: aliceblue;
+    font-weight: normal;
+    text-decoration: none;
+    cursor: pointer;
+    float: right;
+}
+
+.back:hover {
+    background-color: #333;
+}
+
+h1:not(.warning) {
+    color: aliceblue;
+}
+
+h2 {
+    color: azure;
+    margin: 0;
+}
+
+a {
+    color: antiquewhite;
+}
+
+@media screen and (max-width:800px) {
+    em {
+        padding: 1vw 2vw;
+        font-size: 4.5vw;
+    }
+
+    h1:not(.warning) {
+        font-size: 6vw;
+        margin: 0 0 3vw 0;
+    }
+
+    h2 {
+        font-size: 5vw;
     }
 
     .links {
         grid-area: 2/1/2/6;
-        background-color: #444;
         margin: 0;
+        background-color: rgba(255, 255, 255, 0.6);
+        border: 2px solid white;
+        border-radius: 10px;
+        box-shadow: white 0px 0px 15px;
         padding: 3vw 2vw;
     }
 
-    em {
-        background-color: #222;
-        padding: 1vw 2vw 1vw 2vw;
-        font-family: monospace;
-        font-size: 4.5vw;
-        color: ghostwhite;
-    }
-
     .links a {
-        display: block;
         font-size: 5vw;
         margin-bottom: 2vw;
     }
 
     .links h1 {
-        font-size: 6vw;
-        background-color: #444;
-    }
-
-    .links h2 {
-        background-color: #444;
+        font-size: 6vw
     }
 
     .info {
         grid-area: 1/1/1/6;
-        margin-bottom: 3vw;
+        margin-bottom: 3vw
     }
 
-    .args h2 {
-        margin: 0 0 4vw 0;
-        line-height: 7.5vw;
+    .info, .example {
+        padding: 3vw 2vw;
+    }
+
+    .info hr, .example hr {
+        margin: 3vw 0;
     }
 
     .examples {
@@ -52,103 +104,83 @@
         scroll-margin-top: calc(20px + 6.5vw);
     }
 
-    .info, .example {
-        background-color: #444;
-        padding: 3vw 2vw;
-    }
-
-    .info hr, .example hr {
-        margin: 3vw 0;
-    }
-
     .back {
-        background-color: #555;
-        border: 1vw outset #777;
         padding: 1vw 4vw;
         font-size: 5vw;
-        font-weight: normal;
-        cursor: pointer;
-        text-decoration: none;
-        color: aliceblue;
-        float: right;
     }
 
-    .back:hover {
-        background-color: #333;
-        border: 1vw outset #555;
-        font-weight: normal;
-        cursor: pointer;
-    }
-
-    h1:not(.warning) {
-        color: aliceblue;
-        font-size: 6vw;
-        margin: 0 0 3vw 0;
-    }
-
-    h2 {
-        color: azure;
-        font-size: 5vw;
-        margin: 0;
-    }
-
-    a {
-        color:antiquewhite;
+    .args h2 {
+        margin: 0 0 4vw 0;
+        line-height: 7.5vw;
     }
 }
 
-@media screen and (min-width: 721px) {
-    body {
-        margin-bottom: 3vw;
+@media screen and (min-width:801px) and (max-width:1280px){
+    em {
+        padding: 0 1vw 0.25vw 1vw;
+        font-size: 1.5vw;
+    }
+
+    h1:not(.warning) {
+        font-size: 2.5vw;
+        margin: 0 0 1vw 0;
+    }
+
+    h2 {
+        font-size: 2vw;
+        margin: 0;
     }
 
     .links {
         grid-area: 1/8/1/10;
         margin: 0 0 0 1vw;
-        background-color: #444;
+        display: flex;
+        flex-direction: column;
     }
 
-    em {
-        background-color: #222;
-        padding: 0 1vw 0.25vw 1vw;
-        font-family: monospace;
-        font-size: 1.25vw;
-        color: ghostwhite;
+    #top, #middle, #bottom {
+        background-color: rgba(255, 255, 255, 0.6);
+        border: 2px solid white;
+        border-radius: 10px;
+        box-shadow: white 0px 0px 15px;
+    }
+
+    #bottom {
+        flex: 1;
     }
 
     .links a {
-        display: block;
         padding: 0 2vw;
-        font-size: 1.25vw;
+        font-size: 1.75vw;
         margin-bottom: 1vw;
+    }
+
+    .links h1 {
+        padding: 1vw 2vw;
+        margin: 0;
+        font-size: 2vw;
+    }
+
+    .links h2 {
+        padding: 0 2vw;
+        margin: 0 0 1vw 0;
+        font-size: 1.75vw;
     }
 
     .gap {
         padding: 0.25vw 0;
-        background-color: black;
     }
 
     .info {
         grid-area: 1/2/1/8;
     }
 
-    .back {
-        background-color: #555;
-        border: 0.25vw outset #777;
-        padding: 0 1vw;
-        font-size: 1.25vw;
-        font-weight: normal;
-        cursor: pointer;
-        text-decoration: none;
-        color: aliceblue;
-        float: right;
+    .info, .example {
+        padding: 1vw 2vw;
     }
 
-    .back:hover {
-        background-color: #333;
-        border: 0.25vw outset #555;
-        font-weight: normal;
-        cursor: pointer;
+    .info hr, .example hr {
+        margin: 1vw 0;
     }
 
     .examples {
@@ -160,8 +192,82 @@
         scroll-margin-top: calc(20px + 2.25vw);
     }
 
+    .back {
+        padding: 0.5vw 1.5vw;
+        font-size: 1.5vw;
+    }
+
+    .args h2 {
+        margin: 0 0 1vw 0;
+    }
+
+    .results {
+        background-color: #222;
+        padding-bottom: 0.25vw;
+    }
+}
+
+@media screen and (min-width:1281px){
+    em {
+        padding: 0 1vw 0.25vw 1vw;
+        font-size: 1.25vw;
+    }
+
+    h1:not(.warning) {
+        font-size: 2vw;
+        margin: 0 0 1vw 0;
+    }
+
+    h2 {
+        font-size: 1.5vw;
+        margin: 0;
+    }
+
+    .links {
+        grid-area: 1/8/1/10;
+        margin: 0 0 0 1vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #top, #middle, #bottom {
+        background-color: rgba(255, 255, 255, 0.6);
+        border: 2px solid white;
+        border-radius: 10px;
+        box-shadow: white 0px 0px 15px;
+    }
+
+    #bottom {
+        flex: 1;
+    }
+
+    .links a {
+        padding: 0 2vw;
+        font-size: 1.25vw;
+        margin-bottom: 1vw;
+    }
+
+    .links h1 {
+        padding: 1vw 2vw;
+        margin: 0;
+        font-size: 1.66vw;
+    }
+    
+    .links h2 {
+        padding: 0 2vw;
+        margin: 0 0 1vw 0;
+        font-size: 1.25vw;
+    }
+
+    .gap {
+        padding: 0.25vw 0;
+    }
+
+    .info {
+        grid-area: 1/2/1/8;
+    }
+
     .info, .example {
-        background-color: #444;
         padding: 1vw 2vw;
     }
 
@@ -169,38 +275,22 @@
         margin: 1vw 0;
     }
 
-    h1:not(.warning) {
-        color: aliceblue;
-        font-size: 2vw;
-        margin: 0 0 1vw 0;
+    .examples {
+        margin-top: 1vw;
+        grid-area: 2/3/2/9;
     }
 
-    h2 {
-        color: azure;
-        font-size: 1.5vw;
-        margin: 0;
+    .example {
+        scroll-margin-top: calc(20px + 2.25vw);
     }
 
-    .links h1 {
-        padding: 1vw 2vw;
-        margin: 0;
-        font-size: 1.66vw;
-        background-color: #444;
-    }
-
-    .links h2 {
-        padding: 0 2vw;
-        margin: 0 0 1vw 0;
+    .back {
+        padding: 0.25vw 1vw;
         font-size: 1.25vw;
-        background-color: #444;
     }
 
     .args h2 {
         margin: 0 0 1vw 0;
-    }
-
-    a {
-        color:antiquewhite;
     }
 
     .results {

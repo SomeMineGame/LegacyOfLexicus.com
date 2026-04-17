@@ -1,4 +1,4 @@
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 800px) {
     html {
         scroll-padding-top: 32vw;
     }
@@ -70,7 +70,7 @@
     }
 }
 
-@media screen and (min-width: 721px) {
+@media screen and (min-width: 801px) {
     html {
         scroll-padding-top: 4vw;
     }

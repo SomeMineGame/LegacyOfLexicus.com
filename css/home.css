@@ -67,13 +67,17 @@ a {
 button {
     background-color: black;
     border: 2px solid white;
-    box-shadow: insetlime 0px 0px 15px;
     border-radius: 5px;
-    color: white
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #333;
 }
 
 .info {
-    background-color: rgba(0, 0, 255, 0.3);
+    background-color: rgba(26, 26, 27, 0.3);
     border: 2px solid blue;
     border-radius: 10px;
     box-shadow: blue 0px 0px 15px;
@@ -81,7 +85,7 @@ button {
     padding: 10px 0px;
 }
 
-@media screen and (max-width:720px) {
+@media screen and (max-width:800px) {
     .maingrid img {
         grid-area: 1/1/1/3;
         max-width: 28vw;
@@ -120,12 +124,17 @@ button {
         grid-area: 5/1/5/6;
         padding: 3vw;
     }
+    
+    .donation h1 {
+        font-size: 4vw;
+    }
 
     .backgrounddiv2 {
         grid-area: 4/1/4/6;
     }
 
     .info, .info h1 {
+        padding: 1.5vw;
         grid-area: 3/1/3/6;
         font-size: 4vw;
     }
@@ -137,7 +146,7 @@ button {
     }
 }
 
-@media screen and (min-width:721px) and (max-width:1280px){
+@media screen and (min-width:801px) and (max-width:1280px){
     .maingrid img {
         grid-area: 1/2/1/5;
         max-width: 27vw;

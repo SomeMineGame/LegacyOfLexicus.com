@@ -1,4 +1,4 @@
-@media screen and (max-width:720px) {
+@media screen and (max-width:800px) {
     h1 {
         color: aliceblue;
         text-align: center;
@@ -14,7 +14,7 @@
     }
 }
 
-@media screen and (min-width:721px) {
+@media screen and (min-width:801px) {
     h1 {
         color: aliceblue;
         text-align: center;
