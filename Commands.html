@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discord Commands</title>
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/discord-commands.css">
-    <script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Discord Commands</title>
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/discord-commands.css">
+        <script>
         function search_tags() {
             let input = document.getElementById('Tags').value.toLowerCase();
             let tbs = document.getElementsByTagName('table');
@@ -48,13 +48,15 @@
                 let h1Id = (h1.id || "").toLowerCase();
                 let h1Tags = (h1.getAttribute("class") || "").toLowerCase();
 
-                if ((h1Id.includes(input) || h1Tags.includes(input)) && !h1.classList.contains("title")) {
+                if (h1Id.includes(input) || h1Tags.includes(input)) {
                     h1.classList.remove("hidden");
                     noElementsFound = false;
+                } else if (h1.classList.contains("warning")){
+                    continue;
                 } else {
                     h1.classList.add("hidden");
                 }
-                }
+            }
           
             for (let i = 0; i < h3s.length; i++) {
                 let h3 = h3s[i];
@@ -78,282 +80,380 @@
               }
           }
     </script>
-</head>
-<body>
-    <ul id="homeul">
-        <li class="right"><img class="logo" src="/assets/Logo.png" alt="Legacy Of Lexicus Logo"></li>
-        <li class="sitename">Legacy Of Lexicus Wiki</li>
-        <li class="menutop"><a class="menu active">Menu</a>
-            <ul class="menuelements">
-                <li><a href="/Home.html">Home</a></li>
-                <li><a class="active" href="/Commands.html">Discord-Commands</a></li>
-                <li><a href="/Plugins.html">Plugins</a></li>
-                <li><a href="/Datapacks.html">Datapacks</a></li>
-                <li><a href="/Lawbook.html">Lawbook</a></li>
-                <li><a href="/News.html">News</a></li>
-            </ul>
-        </li>
-    </ul>
-    <h1 class="warning" style="background-color: yellow; color: black">LegacyOfLexicus.com IS STILL UNDER CONSTRUCTION. EXPECT BUGS.</h1>
-    <div class="maingrid">
-        <div class="maincontainer">
-            <h1 class="title">These commands are used on the Discord server to add extra functionality to the Minecraft server. They are custom coded by SomeMineGame in a Discord bot written in Python. There are still new commands being added to the server every so often! Click on a command to learn more about it! Current Prefix - <code>/</code></h1>
-            <h2>Items marked with * are still in development.</h2>
-            <div><input class="tags" id="Tags" onkeyup="search_tags()" oninput="search_tags()" type="search" name="tag" placeholder="Search Commands..."></div>
-            <h3 class="addBase editBase removeBase viewBase">Base Commands</h3>
-            <table class="addBase editBase removeBase viewBase">
-                <tr class="addBase editBase removeBase viewBase">
-                    <th class="command">Command</th>
-                    <th class="desc">Short Description</th>
-                </tr>
-                <tr id="addBase" class="element" onclick="window.location='/Commands/addBase.html'">
-                    <td class="command">addBase</td>
-                    <td class="desc">Adds your base's location for others to see</td>
-                </tr>
-                <tr id="editBase" class="element" onclick="window.location='/Commands/editBase.html'">
-                    <td class="command">editBase</td>
-                    <td class="desc">Edits your base location</td>
-                </tr>
-                <tr id="removeBase" class="element" onclick="window.location='/Commands/removeBase.html'">
-                    <td class="command">removeBase</td>
-                    <td class="desc">Removes your base location</td>
-                </tr>
-                <tr id="viewBase" class="element" onclick="window.location='/Commands/viewBase.html'">
-                    <td class="command">viewBase</td>
-                    <td class="desc">Gives the location of a base</td>
-                </tr>
-            </table>
-            <h3 class="addServer addUser listOldServers register removeUser requestData resetServer restoreServer update updateUser">Database Commands</h3>
-            <table class="addServer addUser listOldServers register resetServer restoreServer update">
-                <tr class="addServer addUser listOldServers register resetServer restoreServer update">
-                    <th class="command">Command</th>
-                    <th class="desc">Short Description</th>
-                </tr>
-                <tr id="addServer" class="element" onclick="window.location='/Commands/addServer.html'">
-                    <td class="command">addServer</td>
-                    <td class="desc">Creates a Discord server's files</td>
-                </tr>
-                <tr id="addUser" class="element" onclick="window.location='/Commands/addUser.html'">
-                    <td class="command">addUser</td>
-                    <td class="desc">Creates a user's files</td>
-                </tr>
-                <tr id="listOldServers" class="element" onclick="window.location='/Commands/listOldServers.html'">
-                    <td class="command">listOldServers</td>
-                    <td class="desc">Lists past server resets</td>
-                </tr>
-                <tr id="register" class="element" onclick="window.location='/Commands/register.html'">
-                    <td class="command">register</td>
-                    <td class="desc">Whitelists the player or updates username</td>
-                </tr>
-                <tr id="removeUser" class="element" onclick="window.location='/Commands/removeUser.html'">
-                    <td class="command">removeUser</td>
-                    <td class="desc">Removes a user's files</td>
-                </tr>
-                <tr id="requestData" class="element" onclick="window.location='/Commands/requestData.html'">
-                    <td class="command">requestData</td>
-                    <td class="desc">Request saved player Discord files</td>
-                </tr>
-                <tr id="resetServer" class="element" onclick="window.location='/Commands/resetServer.html'">
-                    <td class="command">resetServer</td>
-                    <td class="desc">Resets everyone's files</td>
-                </tr>
-                <tr id="restoreServer" class="element" onclick="window.location='/Commands/restoreServer.html'">
-                    <td class="command">restoreServer</td>
-                    <td class="desc">Restores data from a previous reset</td>
-                </tr>
-                <tr id="update" class="element" onclick="window.location='/Commands/update.html'">
-                    <td class="command">update</td>
-                    <td class="desc">Updates files to a newer format</td>
-                </tr>
-                <tr id="updateUser" class="element" onclick="window.location='/Commands/updateUser.html'">
-                    <td class="command">updateUser</td>
-                    <td class="desc">Creates a Discord server's files</td>
-                </tr>
-            </table>
-            <h3 class="addMoney bank buy charity clockIn clockOut drawLottery enchant forceClockOut govtBuy govtSell inflation lottery pay payGovt price removeMoney sell setMoney taxBal taxPay voidBuy voidSell wealthy">Economy Commands</h3>
-            <table class="addMoney bank buy charity clockIn clockOut drawLottery enchant forceClockOut govtBuy govtSell inflation lottery pay payGovt price removeMoney sell setMoney taxBal taxPay voidBuy voidSell wealthy">
-                <tr class="addMoney bank buy charity clockIn clockOut drawLottery enchant forceClockOut govtBuy govtSell inflation lottery pay payGovt price removeMoney sell setMoney taxBal taxPay voidBuy voidSell wealthy">
-                    <th class="command">Command</th>
-                    <th class="desc">Short Description</th>
-                </tr>
-                <tr id="addMoney" class="element" onclick="window.location='/Commands/addMoney.html'">
-                    <td class="command">addMoney</td>
-                    <td class="desc">Adds money to a user's wallet</td>
-                </tr>
-                <tr id="bank" class="element" onclick="window.location='/Commands/bank.html'">
-                    <td class="command">bank</td>
-                    <td class="desc">Manages your bank account</td>
-                </tr>
-                <tr id="buy" class="element" onclick="window.location='/Commands/buy.html'">
-                    <td class="command"><em>buy*</em></td>
-                    <td class="desc">Buy an item in Minecraft from the shop</td>
-                </tr>
-                <tr id="charity" class="element" onclick="window.location='/Commands/charity.html'">
-                    <td class="command">charity</td>
-                    <td class="desc">Manage or donate to charities</td>
-                </tr>
-                <tr id="clockIn" class="element" onclick="window.location='/Commands/clockIn.html'">
-                    <td class="command">clockIn</td>
-                    <td class="desc">Clocks you into work</td>
-                </tr>
-                <tr id="clockOut" class="element" onclick="window.location='/Commands/clockOut.html'">
-                    <td class="command">clockOut</td>
-                    <td class="desc">Clocks you out of work</td>
-                </tr>
-                <tr id="drawLottery" class="element" onclick="window.location='/Commands/drawLottery.html'">
-                    <td class="command">drawLottery</td>
-                    <td class="desc">Draws a winning lottery ticket for a prize pool</td>
-                </tr>
-                <tr id="enchant" class="element" onclick="window.location='/Commands/enchant.html'">
-                    <td class="command">enchant</td>
-                    <td class="desc">Enchant your item if supported</td>
-                </tr>
-                <tr id="forceClockOut" class="element" onclick="window.location='/Commands/forceClockOut.html'">
-                    <td class="command">forceClockOut</td>
-                    <td class="desc">Forcefully ends a user's shift</td>
-                </tr>
-                <tr id="govtBuy" class="element" onclick="window.location='/Commands/govtBuy.html'">
-                    <td class="command"><em>govtBuy*</em></td>
-                    <td class="desc">Buys items with the local government's money</td>
-                </tr>
-                <tr id="govtSell" class="element" onclick="window.location='/Commands/govtSell.html'">
-                    <td class="command"><em>govtSell*</em></td>
-                    <td class="desc">Puts items into the local government's shop</td>
-                </tr>
-                <tr id="inflation" class="element" onclick="window.location='/Commands/inflation.html'">
-                    <td class="command">inflation</td>
-                    <td class="desc">Shows the current inflation rate</td>
-                </tr>
-                <tr id="lottery" class="element" onclick="window.location='/Commands/lottery.html'">
-                    <td class="command">lottery</td>
-                    <td class="desc">Buy lottery tickets</td>
-                </tr>
-                <tr id="pay" class="element" onclick="window.location='/Commands/pay.html'">
-                    <td class="command">pay</td>
-                    <td class="desc">Pay a user from your wallet</td>
-                </tr>
-                <tr id="payGovt" class="element" onclick="window.location='/Commands/payGovt.html'">
-                    <td class="command">payGovt</td>
-                    <td class="desc">Pay the government from your wallet</td>
-                </tr>
-                <tr id="price" class="element" onclick="window.location='/Commands/price.html'">
-                    <td class="command">price</td>
-                    <td class="desc">Get the price of an item</td>
-                </tr>
-                <tr id="randomItem" class="element" onclick="window.location='/Commands/randomItem.html'">
-                    <td class="command"><em>randomItem*</em></td>
-                    <td class="desc">Gambles your money for a random item</td>
-                </tr>
-                <tr id="removeMoney" class="element" onclick="window.location='/Commands/removeMoney.html'">
-                    <td class="command">removeMoney</td>
-                    <td class="desc">Removes money from a user's wallet</td>
-                </tr>
-                <tr id="sell" class="element" onclick="window.location='/Commands/sell.html'">
-                    <td class="command">sell</td>
-                    <td class="desc">Removes an item for money</td>
-                </tr>
-                <tr id="setMoney" class="element" onclick="window.location='/Commands/setMoney.html'">
-                    <td class="command">setMoney</td>
-                    <td class="desc">Sets a user's wallet to a specified amount</td>
-                </tr>
-                <tr id="shop" class="element" onclick="window.location='/Commands/shop.html'">
-                    <td class="command"><em>shop</em></td>
-                    <td class="desc">Lists a user's shop page or removes an item</td>
-                </tr>
-                <tr id="taxBal" class="element" onclick="window.location='/Commands/taxBal.html'">
-                    <td class="command">taxBal</td>
-                    <td class="desc">See how much money the government has</td>
-                </tr>
-                <tr id="taxPay" class="element" onclick="window.location='/Commands/taxPay.html'">
-                    <td class="command">taxPay</td>
-                    <td class="desc">Pay a user with the government funds</td>
-                </tr>
-                <tr id="voidBuy" class="element" onclick="window.location='/Commands/voidBuy.html'">
-                    <td class="command">voidBuy</td>
-                    <td class="desc">Instantly buy an item for inflated cost</td>
-                </tr>
-                <tr id="voidSell" class="element" onclick="window.location='/Commands/voidSell.html'">
-                    <td class="command">voidSell</td>
-                    <td class="desc">Instantly sell an item for a fractioned profit</td>
-                </tr>
-                <tr id="wealthy" class="element" onclick="window.location='/Commands/wealthy.html'">
-                    <td class="command">wealthy</td>
-                    <td class="desc">View the richest players</td>
-                </tr>
-            </table>
-            <h3 class="addNation addSentence editNation editSentence releasePrisoner reportIncident viewSentence">Legal Commands</h3>
-            <table class="addNation addSentence editNation editSentence releasePrisoner reportIncident viewSentence">
-                <tr class="addNation addSentence editNation editSentence releasePrisoner reportIncident viewSentence">
-                    <th class="command">Command</th>
-                    <th class="desc">Short Description</th>
-                </tr>
-                <tr id="addNation" class="element" onclick="window.location='/Commands/addNation.html'">
-                    <td class="command"><em>addNation*</em></td>
-                    <td class="desc">Gives a nation independence</td>
-                </tr>
-                <tr id="addSentence" class="element" onclick="window.location='/Commands/addSentence.html'">
-                    <td class="command">addSentence</td>
-                    <td class="desc">Creates a prison sentence for a player</td>
-                </tr>
-                <tr id="editNation" class="element" onclick="window.location='/Commands/editNation.html'">
-                    <td class="command"><em>editNation*</em></td>
-                    <td class="desc">Edits a nation's information</td>
-                </tr>
-                <tr id="editSentence" class="element" onclick="window.location='/Commands/editSentence.html'">
-                    <td class="command">editSentence</td>
-                    <td class="desc">Edits a player's prison sentence</td>
-                </tr>
-                <tr id="releasePrisoner" class="element" onclick="window.location='/Commands/releasePrisoner.html'">
-                    <td class="command">releasePrisoner</td>
-                    <td class="desc">Ends a player's prison sentence</td>
-                </tr>
-                <tr id="reportIncident" class="element" onclick="window.location='/Commands/reportIncident.html'">
-                    <td class="command">reportIncident</td>
-                    <td class="desc">Starts legal action against another player</td>
-                </tr>
-                <tr id="viewSentence" class="element" onclick="window.location='/Commands/viewSentence.html'">
-                    <td class="command">viewSentence</td>
-                    <td class="desc">Views a player's prison file</td>
-                </tr>
-            </table>
-            <h3 class="cmd day help ip status test">Miscellaneous Commands</h3>
-            <table class="cmd day help ip status test">
-                <tr class="cmd day help ip status test">
-                    <th class="command">Command</th>
-                    <th class="desc">Short Description</th>
-                </tr>
-                <tr id="cmd" class="element" onclick="window.location='/Commands/cmd.html'">
-                    <td class="command">cmd</td>
-                    <td class="desc">Remotely run a Minecraft command</td>
-                </tr>
-                <tr id="day" class="element" onclick="window.location='/Commands/day.html'">
-                    <td class="command">day</td>
-                    <td class="desc">See the current Minecraft day</td>
-                </tr>
-                <tr id="help" class="element" onclick="window.location='/Commands/help.html'">
-                    <td class="command">help</td>
-                    <td class="desc">Sends a link to this page</td>
-                </tr>
-                <tr id="ip" class="element" onclick="window.location='/Commands/ip.html'">
-                    <td class="command">ip</td>
-                    <td class="desc">Lists the IPs or edits them</td>
-                </tr>
-                <tr id="status" class="element" onclick="window.location='/Commands/status.html'">
-                    <td class="command">status</td>
-                    <td class="desc">Gives the server's local and global status</td>
-                </tr>
-                <tr id="test" class="element" onclick="window.location='/Commands/test.html'">
-                    <td class="command">test</td>
-                    <td class="desc">Test's the Discord bot's response</td>
-                </tr>
-            </table>
+    </head>
+    <body>
+        <ul id="homeul">
+            <li class="right"><img class="logo" src="/assets/Logo.png"
+                    alt="Legacy Of Lexicus Logo"></li>
+            <li class="sitename">Legacy Of Lexicus Wiki</li>
+            <li class="menutop"><a class="menu active">Menu</a>
+                <ul class="menuelements">
+                    <li><a href="/Home.html">Home</a></li>
+                    <li><a class="active"
+                            href="/Commands.html">Discord-Commands</a></li>
+                    <li><a href="/Plugins.html">Plugins</a></li>
+                    <li><a href="/Datapacks.html">Datapacks</a></li>
+                    <li><a href="/Lawbook.html">Lawbook</a></li>
+                    <li><a href="/News.html">News</a></li>
+                </ul>
+            </li>
+        </ul>
+        <h1 class="warning"
+            style="background-color: yellow; color: black">LegacyOfLexicus.com
+            IS STILL UNDER CONSTRUCTION. EXPECT BUGS.</h1>
+        <div class="maingrid">
+            <div class="maincontainer">
+                <h1 class="title">These commands are used on the Discord server
+                    to add extra functionality to the Minecraft server. They are
+                    custom coded by SomeMineGame in a Discord bot written in
+                    Python. There are still new commands being added to the
+                    server every so often! Click on a command to learn more
+                    about it! Current Prefix - <code>/</code></h1>
+                <h2>Items marked with * are still in development.</h2>
+                <div><input class="tags" id="Tags" onkeyup="search_tags()"
+                        oninput="search_tags()" type="search" name="tag"
+                        placeholder="Search Commands..."></div>
+                <h3 class="addBase editBase removeBase viewBase">Base
+                    Commands</h3>
+                <table class="addBase editBase removeBase viewBase">
+                    <tr class="addBase editBase removeBase viewBase">
+                        <th class="command">Command</th>
+                        <th class="desc">Short Description</th>
+                    </tr>
+                    <tr id="addBase" class="element"
+                        onclick="window.location='/Commands/addBase.html'">
+                        <td class="command">addBase</td>
+                        <td class="desc">Adds your base's location for others to
+                            see</td>
+                    </tr>
+                    <tr id="editBase" class="element"
+                        onclick="window.location='/Commands/editBase.html'">
+                        <td class="command">editBase</td>
+                        <td class="desc">Edits your base location</td>
+                    </tr>
+                    <tr id="removeBase" class="element"
+                        onclick="window.location='/Commands/removeBase.html'">
+                        <td class="command">removeBase</td>
+                        <td class="desc">Removes your base location</td>
+                    </tr>
+                    <tr id="viewBase" class="element"
+                        onclick="window.location='/Commands/viewBase.html'">
+                        <td class="command">viewBase</td>
+                        <td class="desc">Gives the location of a base</td>
+                    </tr>
+                </table>
+                <h3
+                    class="addServer addUser listOldServers register removeUser requestData resetServer restoreServer update updateUser">Database
+                    Commands</h3>
+                <table
+                    class="addServer addUser listOldServers register resetServer restoreServer update">
+                    <tr
+                        class="addServer addUser listOldServers register resetServer restoreServer update">
+                        <th class="command">Command</th>
+                        <th class="desc">Short Description</th>
+                    </tr>
+                    <tr id="addServer" class="element"
+                        onclick="window.location='/Commands/addServer.html'">
+                        <td class="command">addServer</td>
+                        <td class="desc">Creates a Discord server's files</td>
+                    </tr>
+                    <tr id="addUser" class="element"
+                        onclick="window.location='/Commands/addUser.html'">
+                        <td class="command">addUser</td>
+                        <td class="desc">Creates a user's files</td>
+                    </tr>
+                    <tr id="listOldServers" class="element"
+                        onclick="window.location='/Commands/listOldServers.html'">
+                        <td class="command">listOldServers</td>
+                        <td class="desc">Lists past server resets</td>
+                    </tr>
+                    <tr id="register" class="element"
+                        onclick="window.location='/Commands/register.html'">
+                        <td class="command">register</td>
+                        <td class="desc">Whitelists the player or updates
+                            username</td>
+                    </tr>
+                    <tr id="removeUser" class="element"
+                        onclick="window.location='/Commands/removeUser.html'">
+                        <td class="command">removeUser</td>
+                        <td class="desc">Removes a user's files</td>
+                    </tr>
+                    <tr id="requestData" class="element"
+                        onclick="window.location='/Commands/requestData.html'">
+                        <td class="command">requestData</td>
+                        <td class="desc">Request saved player Discord files</td>
+                    </tr>
+                    <tr id="resetServer" class="element"
+                        onclick="window.location='/Commands/resetServer.html'">
+                        <td class="command">resetServer</td>
+                        <td class="desc">Resets everyone's files</td>
+                    </tr>
+                    <tr id="restoreServer" class="element"
+                        onclick="window.location='/Commands/restoreServer.html'">
+                        <td class="command">restoreServer</td>
+                        <td class="desc">Restores data from a previous
+                            reset</td>
+                    </tr>
+                    <tr id="update" class="element"
+                        onclick="window.location='/Commands/update.html'">
+                        <td class="command">update</td>
+                        <td class="desc">Updates files to a newer format</td>
+                    </tr>
+                    <tr id="updateUser" class="element"
+                        onclick="window.location='/Commands/updateUser.html'">
+                        <td class="command">updateUser</td>
+                        <td class="desc">Creates a Discord server's files</td>
+                    </tr>
+                </table>
+                <h3
+                    class="addMoney bank buy charity clockIn clockOut drawLottery enchant forceClockOut govtBuy govtSell inflation lottery pay payGovt price removeMoney sell setMoney taxBal taxPay voidBuy voidSell wealthy">Economy
+                    Commands</h3>
+                <table
+                    class="addMoney bank buy charity clockIn clockOut drawLottery enchant forceClockOut govtBuy govtSell inflation lottery pay payGovt price removeMoney sell setMoney taxBal taxPay voidBuy voidSell wealthy">
+                    <tr
+                        class="addMoney bank buy charity clockIn clockOut drawLottery enchant forceClockOut govtBuy govtSell inflation lottery pay payGovt price removeMoney sell setMoney taxBal taxPay voidBuy voidSell wealthy">
+                        <th class="command">Command</th>
+                        <th class="desc">Short Description</th>
+                    </tr>
+                    <tr id="addMoney" class="element"
+                        onclick="window.location='/Commands/addMoney.html'">
+                        <td class="command">addMoney</td>
+                        <td class="desc">Adds money to a user's wallet</td>
+                    </tr>
+                    <tr id="bank" class="element"
+                        onclick="window.location='/Commands/bank.html'">
+                        <td class="command">bank</td>
+                        <td class="desc">Manages your bank account</td>
+                    </tr>
+                    <tr id="buy" class="element"
+                        onclick="window.location='/Commands/buy.html'">
+                        <td class="command"><em>buy*</em></td>
+                        <td class="desc">Buy an item in Minecraft from the
+                            shop</td>
+                    </tr>
+                    <tr id="charity" class="element"
+                        onclick="window.location='/Commands/charity.html'">
+                        <td class="command">charity</td>
+                        <td class="desc">Manage or donate to charities</td>
+                    </tr>
+                    <tr id="clockIn" class="element"
+                        onclick="window.location='/Commands/clockIn.html'">
+                        <td class="command">clockIn</td>
+                        <td class="desc">Clocks you into work</td>
+                    </tr>
+                    <tr id="clockOut" class="element"
+                        onclick="window.location='/Commands/clockOut.html'">
+                        <td class="command">clockOut</td>
+                        <td class="desc">Clocks you out of work</td>
+                    </tr>
+                    <tr id="drawLottery" class="element"
+                        onclick="window.location='/Commands/drawLottery.html'">
+                        <td class="command">drawLottery</td>
+                        <td class="desc">Draws a winning lottery ticket for a
+                            prize pool</td>
+                    </tr>
+                    <tr id="enchant" class="element"
+                        onclick="window.location='/Commands/enchant.html'">
+                        <td class="command">enchant</td>
+                        <td class="desc">Enchant your item if supported</td>
+                    </tr>
+                    <tr id="forceClockOut" class="element"
+                        onclick="window.location='/Commands/forceClockOut.html'">
+                        <td class="command">forceClockOut</td>
+                        <td class="desc">Forcefully ends a user's shift</td>
+                    </tr>
+                    <tr id="govtBuy" class="element"
+                        onclick="window.location='/Commands/govtBuy.html'">
+                        <td class="command"><em>govtBuy*</em></td>
+                        <td class="desc">Buys items with the local government's
+                            money</td>
+                    </tr>
+                    <tr id="govtSell" class="element"
+                        onclick="window.location='/Commands/govtSell.html'">
+                        <td class="command"><em>govtSell*</em></td>
+                        <td class="desc">Puts items into the local government's
+                            shop</td>
+                    </tr>
+                    <tr id="inflation" class="element"
+                        onclick="window.location='/Commands/inflation.html'">
+                        <td class="command">inflation</td>
+                        <td class="desc">Shows the current inflation rate</td>
+                    </tr>
+                    <tr id="lottery" class="element"
+                        onclick="window.location='/Commands/lottery.html'">
+                        <td class="command">lottery</td>
+                        <td class="desc">Buy lottery tickets</td>
+                    </tr>
+                    <tr id="pay" class="element"
+                        onclick="window.location='/Commands/pay.html'">
+                        <td class="command">pay</td>
+                        <td class="desc">Pay a user from your wallet</td>
+                    </tr>
+                    <tr id="payGovt" class="element"
+                        onclick="window.location='/Commands/payGovt.html'">
+                        <td class="command">payGovt</td>
+                        <td class="desc">Pay the government from your
+                            wallet</td>
+                    </tr>
+                    <tr id="price" class="element"
+                        onclick="window.location='/Commands/price.html'">
+                        <td class="command">price</td>
+                        <td class="desc">Get the price of an item</td>
+                    </tr>
+                    <tr id="randomItem" class="element"
+                        onclick="window.location='/Commands/randomItem.html'">
+                        <td class="command"><em>randomItem*</em></td>
+                        <td class="desc">Gambles your money for a random
+                            item</td>
+                    </tr>
+                    <tr id="removeMoney" class="element"
+                        onclick="window.location='/Commands/removeMoney.html'">
+                        <td class="command">removeMoney</td>
+                        <td class="desc">Removes money from a user's wallet</td>
+                    </tr>
+                    <tr id="sell" class="element"
+                        onclick="window.location='/Commands/sell.html'">
+                        <td class="command">sell</td>
+                        <td class="desc">Removes an item for money</td>
+                    </tr>
+                    <tr id="setMoney" class="element"
+                        onclick="window.location='/Commands/setMoney.html'">
+                        <td class="command">setMoney</td>
+                        <td class="desc">Sets a user's wallet to a specified
+                            amount</td>
+                    </tr>
+                    <tr id="shop" class="element"
+                        onclick="window.location='/Commands/shop.html'">
+                        <td class="command"><em>shop</em></td>
+                        <td class="desc">Lists a user's shop page or removes an
+                            item</td>
+                    </tr>
+                    <tr id="taxBal" class="element"
+                        onclick="window.location='/Commands/taxBal.html'">
+                        <td class="command">taxBal</td>
+                        <td class="desc">See how much money the government
+                            has</td>
+                    </tr>
+                    <tr id="taxPay" class="element"
+                        onclick="window.location='/Commands/taxPay.html'">
+                        <td class="command">taxPay</td>
+                        <td class="desc">Pay a user with the government
+                            funds</td>
+                    </tr>
+                    <tr id="voidBuy" class="element"
+                        onclick="window.location='/Commands/voidBuy.html'">
+                        <td class="command">voidBuy</td>
+                        <td class="desc">Instantly buy an item for inflated
+                            cost</td>
+                    </tr>
+                    <tr id="voidSell" class="element"
+                        onclick="window.location='/Commands/voidSell.html'">
+                        <td class="command">voidSell</td>
+                        <td class="desc">Instantly sell an item for a fractioned
+                            profit</td>
+                    </tr>
+                    <tr id="wealthy" class="element"
+                        onclick="window.location='/Commands/wealthy.html'">
+                        <td class="command">wealthy</td>
+                        <td class="desc">View the richest players</td>
+                    </tr>
+                </table>
+                <h3
+                    class="addNation addSentence editNation editSentence releasePrisoner reportIncident viewSentence">Legal
+                    Commands</h3>
+                <table
+                    class="addNation addSentence editNation editSentence releasePrisoner reportIncident viewSentence">
+                    <tr
+                        class="addNation addSentence editNation editSentence releasePrisoner reportIncident viewSentence">
+                        <th class="command">Command</th>
+                        <th class="desc">Short Description</th>
+                    </tr>
+                    <tr id="addNation" class="element"
+                        onclick="window.location='/Commands/addNation.html'">
+                        <td class="command"><em>addNation*</em></td>
+                        <td class="desc">Gives a nation independence</td>
+                    </tr>
+                    <tr id="addSentence" class="element"
+                        onclick="window.location='/Commands/addSentence.html'">
+                        <td class="command">addSentence</td>
+                        <td class="desc">Creates a prison sentence for a
+                            player</td>
+                    </tr>
+                    <tr id="editNation" class="element"
+                        onclick="window.location='/Commands/editNation.html'">
+                        <td class="command"><em>editNation*</em></td>
+                        <td class="desc">Edits a nation's information</td>
+                    </tr>
+                    <tr id="editSentence" class="element"
+                        onclick="window.location='/Commands/editSentence.html'">
+                        <td class="command">editSentence</td>
+                        <td class="desc">Edits a player's prison sentence</td>
+                    </tr>
+                    <tr id="releasePrisoner" class="element"
+                        onclick="window.location='/Commands/releasePrisoner.html'">
+                        <td class="command">releasePrisoner</td>
+                        <td class="desc">Ends a player's prison sentence</td>
+                    </tr>
+                    <tr id="reportIncident" class="element"
+                        onclick="window.location='/Commands/reportIncident.html'">
+                        <td class="command">reportIncident</td>
+                        <td class="desc">Starts legal action against another
+                            player</td>
+                    </tr>
+                    <tr id="viewSentence" class="element"
+                        onclick="window.location='/Commands/viewSentence.html'">
+                        <td class="command">viewSentence</td>
+                        <td class="desc">Views a player's prison file</td>
+                    </tr>
+                </table>
+                <h3 class="cmd day help ip status test">Miscellaneous
+                    Commands</h3>
+                <table class="cmd day help ip status test">
+                    <tr class="cmd day help ip status test">
+                        <th class="command">Command</th>
+                        <th class="desc">Short Description</th>
+                    </tr>
+                    <tr id="cmd" class="element"
+                        onclick="window.location='/Commands/cmd.html'">
+                        <td class="command">cmd</td>
+                        <td class="desc">Remotely run a Minecraft command</td>
+                    </tr>
+                    <tr id="day" class="element"
+                        onclick="window.location='/Commands/day.html'">
+                        <td class="command">day</td>
+                        <td class="desc">See the current Minecraft day</td>
+                    </tr>
+                    <tr id="help" class="element"
+                        onclick="window.location='/Commands/help.html'">
+                        <td class="command">help</td>
+                        <td class="desc">Sends a link to this page</td>
+                    </tr>
+                    <tr id="ip" class="element"
+                        onclick="window.location='/Commands/ip.html'">
+                        <td class="command">ip</td>
+                        <td class="desc">Lists the IPs or edits them</td>
+                    </tr>
+                    <tr id="status" class="element"
+                        onclick="window.location='/Commands/status.html'">
+                        <td class="command">status</td>
+                        <td class="desc">Gives the server's local and global
+                            status</td>
+                    </tr>
+                    <tr id="test" class="element"
+                        onclick="window.location='/Commands/test.html'">
+                        <td class="command">test</td>
+                        <td class="desc">Test's the Discord bot's response</td>
+                    </tr>
+                </table>
+            </div>
         </div>
-    </div>
-<footer id="footer">
-    <ul style="padding: 3px 10px">
-        <li class="left">Site Created By: <a href="https://someminegame.com">SomeMineGame</a></li>
-        <li class="right">Page Last Edited: January 23, 2026 at 9:27 PM</li>
-    </ul>
-</footer>
-</body>
+        <footer id="footer">
+            <ul style="padding: 3px 10px">
+                <li class="left">Site Created By: <a
+                        href="https://someminegame.com">SomeMineGame</a></li>
+                <li class="right">Page Last Edited: January 23, 2026 at 9:27
+                    PM</li>
+            </ul>
+        </footer>
+    </body>
 </html>

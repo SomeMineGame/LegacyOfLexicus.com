@@ -1,9 +1,31 @@
-@media screen and (max-width: 800px) {
-    body {
-        color: aliceblue;
-        text-align: center;
-    }
+/* Shared */
+body {
+    color: aliceblue;
+    text-align: center;
+}
 
+a {
+    color:antiquewhite
+}
+
+h1 {
+    background-color: rgba(0, 255, 255, 0.4);
+    border: 2px solid cyan;
+    border-radius: 10px;
+    box-shadow: cyan 0px 0px 15px;
+    color: cyan;
+    padding: 5px 10px;
+}
+
+p {
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: white 0px 0px 15px;
+    padding: 10px 10px;
+}
+
+@media screen and (max-width:800px) {
     h1 {
         font-size: 6.25vw;
         grid-area: 1/1/1/6
@@ -13,19 +35,21 @@
         font-size: 5.5vw;
         grid-area: 2/1/2/6
     }
-
-    a {
-        color:antiquewhite
-    }
-
 }
 
-@media screen and (min-width: 801px) {
-    body {
-        color: aliceblue;
-        text-align: center;
+@media screen and (min-width:801px) and (max-width:1280px){
+    h1 {
+        font-size: 3.5vw;
+        grid-area:1/2/1/10
     }
 
+    p {
+        font-size: 3vw;
+        grid-area: 2/2/2/10
+    }
+}
+
+@media screen and (min-width:1281px){
     h1 {
         font-size: 2.25vw;
         grid-area:1/2/1/10
@@ -34,9 +58,5 @@
     p {
         font-size: 1.75vw;
         grid-area: 2/2/2/10
-    }
-
-    a {
-        color:antiquewhite
     }
 }

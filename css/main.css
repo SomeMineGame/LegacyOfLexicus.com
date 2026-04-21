@@ -17,6 +17,7 @@ body {
     position: sticky;
     top: 0;
     border: 1px solid white;
+    z-index: 1;
 }
 
 #homeul img {
@@ -29,7 +30,7 @@ body {
     background-color: rgba(0, 255, 255, 0.1);
     border: 2px solid transparent;
     margin: -2px;
-    z-index: 0;
+    z-index: 1;
     color: #00AAAA;
     padding: 10px 16px;
     text-decoration: none;
@@ -40,7 +41,7 @@ body {
     border: 2px solid cyan;
     position: relative;
     margin: -2px;
-    z-index: 1;
+    z-index: 2;
     color: cyan;
 }
 
@@ -49,7 +50,7 @@ body {
     border: 2px solid cyan !important;
     margin: -2px;
     position: relative;
-    z-index: 2;
+    z-index: 3;
     box-shadow: cyan 0px 0px 5px !important;
     color: cyan !important;
 }
@@ -66,7 +67,7 @@ body {
 .warning {
     border: 2px solid gold !important;
     border-radius: 10px;
-    box-shadow: yellow 0px 0px 5px !important;
+    box-shadow: yellow 0px 0px 15px !important;
 }
 
 footer {
@@ -250,7 +251,7 @@ footer ul li a {
     }
 
     .warning {
-        font-size: 1.5vw !important;
+        font-size: 2vw !important;
         text-align: center;
         padding: 5px;
     }
