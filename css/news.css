@@ -1,0 +1,92 @@
+/* Shared */
+body {
+    text-align: center;
+}
+
+h1 {
+    color: aliceblue;
+}
+
+figure {
+    display: inline-block;
+    vertical-align: top;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 2px solid white;
+    border-radius: 15px;
+    box-shadow: white 0px 0px 15px;
+}
+
+figure:hover {
+    cursor: pointer;
+}
+
+figure img {
+    border-radius: 15px 15px 0 0;
+}
+
+figure figcaption {
+    padding: 5px 10px
+}
+
+@media screen and (max-width:800px) {
+    h1 {
+        font-size: 7vw;
+        grid-area: 1/1/1/6;
+    }
+
+    figure {
+        width: 41vw;
+        margin: 1.5vw;
+    }
+
+    figure img {
+        width: 41vw;
+    }
+
+    figure figcaption {
+        font-size: 4vw;
+        color: aliceblue;
+    }
+}
+
+@media screen and (min-width:801px) and (max-width:1280px){
+    h1  {
+        font-size: 3.25vw;
+        grid-area: 1/1/1/10;
+    }
+
+    figure {
+        width: 22vw;
+        margin: 0.75vw;
+    }
+
+    figure img {
+        width: 22vw;
+    }
+
+    figure figcaption {
+        font-size: 2.25vw;
+        color: aliceblue;
+    }
+}
+
+@media screen and (min-width:1281px){
+    h1  {
+        font-size: 2.25vw;
+        grid-area: 1/1/1/10;
+    }
+
+    figure {
+        width: 17vw;
+        margin: 1vw;
+    }
+
+    figure img {
+        width: 17vw;
+    }
+
+    figure figcaption {
+        font-size: 1.75vw;
+        color: aliceblue;
+    }
+}
