@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Minecrafter Alt';
-    src: url('https://development.legacyoflexicus.com/assets/Minecrafter.Alt.ttf');
+    src: url('/assets/Minecrafter.Alt.ttf');
 }
 
 /* Shared */
@@ -27,6 +27,7 @@ body {
 }
 
 #homeul li a {
+    transition-duration: 0.4s;
     background-color: rgba(0, 255, 255, 0.1);
     border: 2px solid transparent;
     margin: -2px;
